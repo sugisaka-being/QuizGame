@@ -13,5 +13,7 @@ namespace QuizGame {
         public Form1() {
             InitializeComponent();
         }
+
+        string aaa = "aaa";
     }
 }
