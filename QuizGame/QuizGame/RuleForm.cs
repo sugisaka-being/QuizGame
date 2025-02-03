@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
-    public partial class Rule : Form {
-        public Rule() {
+    public partial class RuleForm : Form {
+        public RuleForm() {
             InitializeComponent();
             label2.Text = "ようこそ、ときタクナルへ！このゲームでは、ヒント君と協力してクイズを解いていきます。\n\n" +
                 "ゲームの流れ\n" +

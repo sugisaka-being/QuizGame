@@ -1,5 +1,5 @@
 ﻿namespace QuizGame {
-    partial class Form1 {
+    partial class StartForm {
         /// <summary>
         /// 必要なデザイナー変数です。
         /// </summary>

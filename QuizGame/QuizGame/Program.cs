@@ -13,8 +13,12 @@ namespace QuizGame {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            Application.Run(new Rule());
+
+            Application.Run(new StartForm());
+            Application.Run(new RuleForm());
+            Application.Run(new GamePlayForm());
+            Application.Run(new AnswerForm());
+            Application.Run(new ResultForm());
         }
     }
 }
