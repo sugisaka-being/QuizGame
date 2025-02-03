@@ -213,9 +213,9 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel2.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.panel2.Location = new System.Drawing.Point(6, 431);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(797, 446);
+            this.panel2.Size = new System.Drawing.Size(797, 874);
             this.panel2.TabIndex = 20;
             this.panel2.UseWaitCursor = true;
             // 
