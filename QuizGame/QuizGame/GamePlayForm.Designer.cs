@@ -35,20 +35,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -69,18 +69,21 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(195)))), ((int)(((byte)(230)))));
             this.button1.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(648, 368);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 50);
             this.button1.TabIndex = 11;
             this.button1.Text = "解答！";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.label1.Location = new System.Drawing.Point(-1, 42);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -93,6 +96,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.label2.Location = new System.Drawing.Point(2, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -197,17 +201,6 @@
             this.label3.Text = "問題文を表示\r\n例：ある男が雨の中で歩いていたが、彼の髪は一切濡れていなかった。\r\nそれはいったいなぜ？\r\n\r\n";
             this.label3.UseWaitCursor = true;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(634, 216);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(154, 68);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -220,24 +213,58 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel2.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.panel2.Location = new System.Drawing.Point(1, 0);
+            this.panel2.Location = new System.Drawing.Point(6, 431);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(802, 451);
+            this.panel2.Size = new System.Drawing.Size(797, 446);
             this.panel2.TabIndex = 20;
             this.panel2.UseWaitCursor = true;
             // 
-            // pictureBox3
+            // label7
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(626, 117);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(177, 230);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.UseWaitCursor = true;
+            this.label7.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.label7.Location = new System.Drawing.Point(67, 78);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.label7.Size = new System.Drawing.Size(456, 206);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "髪の毛が雨に濡れないのは、\r\n傘をさしているときとか、屋根の下にいる時じゃないかな？\r\n";
+            this.label7.UseWaitCursor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(26, 37);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(581, 300);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 22;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.UseWaitCursor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(195)))), ((int)(((byte)(230)))));
+            this.button6.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button6.Location = new System.Drawing.Point(591, 368);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(84, 50);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "質問！";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.UseWaitCursor = true;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.button5.Location = new System.Drawing.Point(698, 360);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 68);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "問題に\r\n戻る\r\n";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseWaitCursor = true;
             // 
             // label5
             // 
@@ -254,45 +281,30 @@
             this.label5.Text = "ここに質問を入力してね！\r\n（例：髪の毛が雨に濡れないときってどんなとき？？？）";
             this.label5.UseWaitCursor = true;
             // 
-            // button5
+            // pictureBox3
             // 
-            this.button5.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button5.Location = new System.Drawing.Point(698, 360);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 68);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "問題に\r\n戻る\r\n";
-            this.button5.UseVisualStyleBackColor = true;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(626, 117);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(177, 230);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.UseWaitCursor = true;
             // 
-            // button6
+            // button4
             // 
-            this.button6.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button6.Location = new System.Drawing.Point(591, 368);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 50);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "質問！";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(26, 33);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(581, 304);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 22;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(67, 78);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.label7.Size = new System.Drawing.Size(456, 206);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "髪の毛が雨に濡れないのは、\r\n傘をさしているときとか、屋根の下にいる時じゃないかな？\r\n";
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::QuizGame.Picture.tsunagetakunaru_touka;
+            this.button4.Location = new System.Drawing.Point(633, 132);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(162, 215);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // GamePlayForm
             // 
@@ -315,8 +327,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,7 +346,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -342,5 +353,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }

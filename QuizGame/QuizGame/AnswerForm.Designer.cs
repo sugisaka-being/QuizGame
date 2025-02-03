@@ -50,6 +50,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 33);
@@ -60,6 +61,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label2.Location = new System.Drawing.Point(12, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(531, 60);
@@ -102,6 +104,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label3.Location = new System.Drawing.Point(12, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 33);
@@ -112,6 +115,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label5.Location = new System.Drawing.Point(12, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(531, 60);
