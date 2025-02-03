@@ -42,7 +42,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,6 +184,7 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -294,18 +294,6 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.UseWaitCursor = true;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::QuizGame.Picture.tsunagetakunaru_touka;
-            this.button4.Location = new System.Drawing.Point(633, 132);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 215);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // GamePlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -313,7 +301,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
@@ -353,6 +340,5 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
     }
 }
