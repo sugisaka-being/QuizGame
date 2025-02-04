@@ -13,13 +13,5 @@ namespace QuizGame {
         public ResultForm() {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e) {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e) {
-
-        }
     }
 }

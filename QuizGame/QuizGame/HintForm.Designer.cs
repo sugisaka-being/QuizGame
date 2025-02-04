@@ -48,11 +48,10 @@
             // 
             // QuestionBackButton
             // 
-            this.QuestionBackButton.BackColor = System.Drawing.Color.White;
+            this.QuestionBackButton.BackColor = System.Drawing.Color.Turquoise;
             this.QuestionBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.QuestionBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QuestionBackButton.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.QuestionBackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.QuestionBackButton.ForeColor = System.Drawing.Color.Black;
             this.QuestionBackButton.Location = new System.Drawing.Point(689, 331);
             this.QuestionBackButton.Name = "QuestionBackButton";
             this.QuestionBackButton.Size = new System.Drawing.Size(75, 68);
@@ -120,7 +119,6 @@
             this.Controls.Add(this.HintCharacterPicture);
             this.Name = "HintForm";
             this.Text = "ときタクナル";
-            this.Load += new System.EventHandler(this.Hint_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HintReplyBubblePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HintCharacterPicture)).EndInit();
             this.ResumeLayout(false);

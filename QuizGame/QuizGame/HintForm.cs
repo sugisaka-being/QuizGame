@@ -13,9 +13,5 @@ namespace QuizGame {
         public HintForm() {
             InitializeComponent();
         }
-
-        private void Hint_Load(object sender, EventArgs e) {
-
-        }
     }
 }

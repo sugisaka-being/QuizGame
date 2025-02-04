@@ -119,7 +119,6 @@
             this.Controls.Add(this.AnswerPanel);
             this.Name = "AnswerForm";
             this.Text = "ときタクナル";
-            this.Load += new System.EventHandler(this.AnswerForm_Load);
             this.AnswerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

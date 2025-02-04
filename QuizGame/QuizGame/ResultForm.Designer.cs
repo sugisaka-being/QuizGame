@@ -46,7 +46,6 @@
             this.HomeBackButton.TabIndex = 1;
             this.HomeBackButton.Text = "ホームに戻る";
             this.HomeBackButton.UseVisualStyleBackColor = true;
-            this.HomeBackButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // ResultTitleLabel
             // 
@@ -69,7 +68,6 @@
             this.FeedbackBubblePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FeedbackBubblePicture.TabIndex = 6;
             this.FeedbackBubblePicture.TabStop = false;
-            this.FeedbackBubblePicture.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // ResultValueLabel
             // 

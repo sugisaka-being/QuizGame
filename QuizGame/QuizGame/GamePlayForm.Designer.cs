@@ -45,10 +45,10 @@
             this.ScoreValueLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.ScoreValueLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ScoreValueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
-            this.ScoreValueLabel.Location = new System.Drawing.Point(-1, 42);
+            this.ScoreValueLabel.Location = new System.Drawing.Point(-1, 39);
             this.ScoreValueLabel.Name = "ScoreValueLabel";
             this.ScoreValueLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.ScoreValueLabel.Size = new System.Drawing.Size(109, 42);
+            this.ScoreValueLabel.Size = new System.Drawing.Size(110, 40);
             this.ScoreValueLabel.TabIndex = 12;
             this.ScoreValueLabel.Text = "10点";
             this.ScoreValueLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -58,10 +58,10 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
-            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Location = new System.Drawing.Point(-1, -1);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label2.Size = new System.Drawing.Size(105, 33);
+            this.label2.Size = new System.Drawing.Size(110, 40);
             this.label2.TabIndex = 13;
             this.label2.Text = "スコア";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -76,9 +76,9 @@
             this.ScorePanel.Controls.Add(this.button3);
             this.ScorePanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.ScorePanel.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ScorePanel.Location = new System.Drawing.Point(661, 25);
+            this.ScorePanel.Location = new System.Drawing.Point(642, 30);
             this.ScorePanel.Name = "ScorePanel";
-            this.ScorePanel.Size = new System.Drawing.Size(109, 86);
+            this.ScorePanel.Size = new System.Drawing.Size(110, 80);
             this.ScorePanel.TabIndex = 14;
             // 
             // button2
@@ -111,7 +111,7 @@
             this.HintMessageLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.HintMessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.HintMessageLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HintMessageLabel.Location = new System.Drawing.Point(75, 220);
+            this.HintMessageLabel.Location = new System.Drawing.Point(98, 221);
             this.HintMessageLabel.Name = "HintMessageLabel";
             this.HintMessageLabel.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.HintMessageLabel.Size = new System.Drawing.Size(434, 63);
@@ -126,10 +126,10 @@
             this.QuestionLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.QuestionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.QuestionLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QuestionLabel.Location = new System.Drawing.Point(12, 9);
+            this.QuestionLabel.Location = new System.Drawing.Point(25, 30);
             this.QuestionLabel.Name = "QuestionLabel";
             this.QuestionLabel.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.QuestionLabel.Size = new System.Drawing.Size(625, 150);
+            this.QuestionLabel.Size = new System.Drawing.Size(600, 150);
             this.QuestionLabel.TabIndex = 15;
             this.QuestionLabel.Text = "文字はプログラムで書く\r\n問題文を表示\r\n例：ある男が雨の中で歩いていたが、彼の髪は一切濡れていなかった。\r\nそれはいったいなぜ？\r\n\r\n";
             // 
@@ -137,10 +137,10 @@
             // 
             this.AnswerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AnswerTextBox.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.AnswerTextBox.Location = new System.Drawing.Point(8, 349);
+            this.AnswerTextBox.Location = new System.Drawing.Point(25, 339);
             this.AnswerTextBox.Multiline = true;
             this.AnswerTextBox.Name = "AnswerTextBox";
-            this.AnswerTextBox.Size = new System.Drawing.Size(659, 50);
+            this.AnswerTextBox.Size = new System.Drawing.Size(620, 50);
             this.AnswerTextBox.TabIndex = 19;
             this.AnswerTextBox.Text = "ここに解答を入力してね";
             // 
@@ -148,13 +148,13 @@
             // 
             this.AnswerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(195)))), ((int)(((byte)(230)))));
             this.AnswerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AnswerButton.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.AnswerButton.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.AnswerButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AnswerButton.Location = new System.Drawing.Point(673, 349);
+            this.AnswerButton.Location = new System.Drawing.Point(652, 339);
             this.AnswerButton.Name = "AnswerButton";
-            this.AnswerButton.Size = new System.Drawing.Size(97, 50);
+            this.AnswerButton.Size = new System.Drawing.Size(100, 50);
             this.AnswerButton.TabIndex = 20;
-            this.AnswerButton.Text = "解答！";
+            this.AnswerButton.Text = " 解答！";
             this.AnswerButton.UseVisualStyleBackColor = false;
             // 
             // HintCharacterButton
@@ -162,21 +162,20 @@
             this.HintCharacterButton.BackColor = System.Drawing.Color.Transparent;
             this.HintCharacterButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HintCharacterButton.Image = global::QuizGame.Properties.Resources.kangaetakunaru;
-            this.HintCharacterButton.Location = new System.Drawing.Point(643, 163);
+            this.HintCharacterButton.Location = new System.Drawing.Point(626, 149);
             this.HintCharacterButton.Name = "HintCharacterButton";
-            this.HintCharacterButton.Size = new System.Drawing.Size(126, 164);
+            this.HintCharacterButton.Size = new System.Drawing.Size(157, 195);
             this.HintCharacterButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HintCharacterButton.TabIndex = 17;
             this.HintCharacterButton.TabStop = false;
-            this.HintCharacterButton.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // HintBubblePicture
             // 
             this.HintBubblePicture.BackColor = System.Drawing.Color.Transparent;
             this.HintBubblePicture.Image = ((System.Drawing.Image)(resources.GetObject("HintBubblePicture.Image")));
-            this.HintBubblePicture.Location = new System.Drawing.Point(12, 177);
+            this.HintBubblePicture.Location = new System.Drawing.Point(25, 195);
             this.HintBubblePicture.Name = "HintBubblePicture";
-            this.HintBubblePicture.Size = new System.Drawing.Size(600, 150);
+            this.HintBubblePicture.Size = new System.Drawing.Size(600, 130);
             this.HintBubblePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HintBubblePicture.TabIndex = 17;
             this.HintBubblePicture.TabStop = false;

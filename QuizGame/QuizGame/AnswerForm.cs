@@ -13,17 +13,5 @@ namespace QuizGame {
         public AnswerForm() {
             InitializeComponent();
         }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void AnswerForm_Load(object sender, EventArgs e) {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e) {
-
-        }
     }
 }
