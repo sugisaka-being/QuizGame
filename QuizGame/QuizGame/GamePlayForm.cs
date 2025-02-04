@@ -26,5 +26,9 @@ namespace QuizGame {
         private void pictureBox1_Click(object sender, EventArgs e) {
             //クリックイベントで画面4への遷移を実装
         }
+
+        private void label5_Click(object sender, EventArgs e) {
+
+        }
     }
 }
