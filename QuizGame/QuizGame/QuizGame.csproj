@@ -84,11 +84,6 @@
     <Compile Include="RuleForm.Designer.cs">
       <DependentUpon>RuleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Picture.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Picture.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AnswerForm.resx">
       <DependentUpon>AnswerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,11 +112,6 @@
     <EmbeddedResource Include="RuleForm.resx">
       <DependentUpon>RuleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Picture.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Picture.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tsunagetakunaru_touka1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hirakitakunaru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kangaetakunaru.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

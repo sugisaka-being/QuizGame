@@ -117,4 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RulesDescriptionLabel.Text" xml:space="preserve">
+    <value>ようこそ、ときタクナルへ！このゲームでは、ヒント君と協力してクイズを解いていきます。
+
+ゲームの流れ
+　全5問のクイズに挑戦します！各問題ごとに、あなたの答えを入力してください。
+　答えに迷ったときは、ヒント君に質問してみましょう！
+　ヒント君が質問に答えて、クイズ攻略を手助けしてくれます。
+
+ 得点について
+　1問正解するごとに10点が加算されます。
+　答えが合っているかどうかは、解説を読んであなた自身で判定してください。
+
+すべての問題を正解し、ハイスコアを目指しましょう！</value>
+  </data>
 </root>
