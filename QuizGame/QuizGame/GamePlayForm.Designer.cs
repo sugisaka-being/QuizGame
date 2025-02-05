@@ -25,10 +25,8 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GamePlayForm));
             this.ScoreValueLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ScoreTitleLabel = new System.Windows.Forms.Label();
             this.ScorePanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.HintMessageLabel = new System.Windows.Forms.Label();
             this.QuestionLabel = new System.Windows.Forms.Label();
             this.AnswerTextBox = new System.Windows.Forms.TextBox();
@@ -53,57 +51,31 @@
             this.ScoreValueLabel.Text = "10点";
             this.ScoreValueLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label2
+            // ScoreTitleLabel
             // 
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
-            this.label2.Location = new System.Drawing.Point(-1, -1);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label2.Size = new System.Drawing.Size(110, 40);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "スコア";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ScoreTitleLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ScoreTitleLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ScoreTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.ScoreTitleLabel.Location = new System.Drawing.Point(-1, -1);
+            this.ScoreTitleLabel.Name = "ScoreTitleLabel";
+            this.ScoreTitleLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.ScoreTitleLabel.Size = new System.Drawing.Size(110, 40);
+            this.ScoreTitleLabel.TabIndex = 13;
+            this.ScoreTitleLabel.Text = "スコア";
+            this.ScoreTitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ScorePanel
             // 
             this.ScorePanel.BackColor = System.Drawing.Color.White;
             this.ScorePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ScorePanel.Controls.Add(this.button2);
             this.ScorePanel.Controls.Add(this.ScoreValueLabel);
-            this.ScorePanel.Controls.Add(this.label2);
-            this.ScorePanel.Controls.Add(this.button3);
+            this.ScorePanel.Controls.Add(this.ScoreTitleLabel);
             this.ScorePanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.ScorePanel.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ScorePanel.Location = new System.Drawing.Point(642, 30);
             this.ScorePanel.Name = "ScorePanel";
             this.ScorePanel.Size = new System.Drawing.Size(110, 80);
             this.ScorePanel.TabIndex = 14;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(180)))), ((int)(((byte)(220)))));
-            this.button2.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(596, 241);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 46);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "×";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(80)))));
-            this.button3.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(542, 242);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 46);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "〇";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // HintMessageLabel
             // 
@@ -205,10 +177,8 @@
 
         #endregion
         private System.Windows.Forms.Label ScoreValueLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ScoreTitleLabel;
         private System.Windows.Forms.Panel ScorePanel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox HintBubblePicture;
         private System.Windows.Forms.Label HintMessageLabel;
         private System.Windows.Forms.Label QuestionLabel;

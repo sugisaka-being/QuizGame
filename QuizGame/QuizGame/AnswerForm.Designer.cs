@@ -24,10 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.AnswerExplanationLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.AnswerPanel = new System.Windows.Forms.Panel();
-            this.IncorrectButton = new System.Windows.Forms.Button();
             this.CorrectButton = new System.Windows.Forms.Button();
+            this.IncorrectButton = new System.Windows.Forms.Button();
             this.UserAnswerLabel = new System.Windows.Forms.Label();
             this.AnswerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -44,30 +43,32 @@
             this.AnswerExplanationLabel.TabIndex = 5;
             this.AnswerExplanationLabel.Text = "【解答】\r\n\r\n男はスキンヘッドだった\r\n\r\n【解説】\r\n\r\n男はスキンヘッドだったため、髪の毛がなく、\r\n雨に濡れる「髪」時代が存在しなかったということです。";
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(531, 60);
-            this.label2.TabIndex = 6;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // AnswerPanel
             // 
             this.AnswerPanel.BackColor = System.Drawing.Color.White;
             this.AnswerPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AnswerPanel.Controls.Add(this.IncorrectButton);
             this.AnswerPanel.Controls.Add(this.CorrectButton);
+            this.AnswerPanel.Controls.Add(this.IncorrectButton);
             this.AnswerPanel.Controls.Add(this.AnswerExplanationLabel);
-            this.AnswerPanel.Controls.Add(this.label2);
             this.AnswerPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.AnswerPanel.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.AnswerPanel.Location = new System.Drawing.Point(18, 20);
             this.AnswerPanel.Name = "AnswerPanel";
             this.AnswerPanel.Size = new System.Drawing.Size(750, 300);
             this.AnswerPanel.TabIndex = 9;
+            // 
+            // CorrectButton
+            // 
+            this.CorrectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(80)))));
+            this.CorrectButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CorrectButton.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CorrectButton.ForeColor = System.Drawing.Color.White;
+            this.CorrectButton.Location = new System.Drawing.Point(635, 240);
+            this.CorrectButton.Name = "CorrectButton";
+            this.CorrectButton.Size = new System.Drawing.Size(50, 50);
+            this.CorrectButton.TabIndex = 14;
+            this.CorrectButton.Text = "〇";
+            this.CorrectButton.UseVisualStyleBackColor = false;
             // 
             // IncorrectButton
             // 
@@ -81,19 +82,6 @@
             this.IncorrectButton.TabIndex = 13;
             this.IncorrectButton.Text = "×";
             this.IncorrectButton.UseVisualStyleBackColor = false;
-            // 
-            // CorrectButton
-            // 
-            this.CorrectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(80)))));
-            this.CorrectButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CorrectButton.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.CorrectButton.ForeColor = System.Drawing.Color.White;
-            this.CorrectButton.Location = new System.Drawing.Point(634, 240);
-            this.CorrectButton.Name = "CorrectButton";
-            this.CorrectButton.Size = new System.Drawing.Size(50, 50);
-            this.CorrectButton.TabIndex = 12;
-            this.CorrectButton.Text = "〇";
-            this.CorrectButton.UseVisualStyleBackColor = false;
             // 
             // UserAnswerLabel
             // 
@@ -126,10 +114,9 @@
 
         #endregion
         private System.Windows.Forms.Label AnswerExplanationLabel;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel AnswerPanel;
         private System.Windows.Forms.Label UserAnswerLabel;
-        private System.Windows.Forms.Button CorrectButton;
         private System.Windows.Forms.Button IncorrectButton;
+        private System.Windows.Forms.Button CorrectButton;
     }
 }
