@@ -44,7 +44,7 @@
             this.HintReplyLabel.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
             this.HintReplyLabel.Size = new System.Drawing.Size(456, 206);
             this.HintReplyLabel.TabIndex = 23;
-            this.HintReplyLabel.Text = "髪の毛が雨に濡れないのは、\r\n傘をさしているときとか、屋根の下にいる時じゃないかな？\r\n";
+            this.HintReplyLabel.Text = "ここに問題文を表示";
             // 
             // QuestionBackButton
             // 
@@ -79,7 +79,7 @@
             this.QuestionTextBox.Name = "QuestionTextBox";
             this.QuestionTextBox.Size = new System.Drawing.Size(581, 70);
             this.QuestionTextBox.TabIndex = 25;
-            this.QuestionTextBox.Text = "ここに解答を入力してね";
+            this.QuestionTextBox.Text = "日本の首都は？";
             // 
             // QuestionSendButton
             // 
@@ -92,6 +92,7 @@
             this.QuestionSendButton.TabIndex = 26;
             this.QuestionSendButton.Text = "質問！";
             this.QuestionSendButton.UseVisualStyleBackColor = false;
+            this.QuestionSendButton.Click += new System.EventHandler(this.QuestionSendButton_Click);
             // 
             // HintCharacterPicture
             // 

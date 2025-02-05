@@ -14,12 +14,9 @@ namespace QuizGame {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new StartForm());
-            Application.Run(new RuleForm());
-            Application.Run(new GamePlayForm());
+        
             Application.Run(new HintForm());
-            Application.Run(new AnswerForm());
-            Application.Run(new ResultForm());
+        
         }
     }
 }
