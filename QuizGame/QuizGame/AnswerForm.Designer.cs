@@ -69,6 +69,7 @@
             this.CorrectButton.TabIndex = 14;
             this.CorrectButton.Text = "〇";
             this.CorrectButton.UseVisualStyleBackColor = false;
+            this.CorrectButton.Click += new System.EventHandler(this.CorrectButton_Click);
             // 
             // IncorrectButton
             // 
@@ -82,6 +83,7 @@
             this.IncorrectButton.TabIndex = 13;
             this.IncorrectButton.Text = "×";
             this.IncorrectButton.UseVisualStyleBackColor = false;
+            this.IncorrectButton.Click += new System.EventHandler(this.IncorrectButton_Click);
             // 
             // UserAnswerLabel
             // 

@@ -12,6 +12,11 @@ namespace QuizGame {
     public partial class StartForm : Form {
         public StartForm() {
             InitializeComponent();
-        }    
+        }
+
+        private void StartButton_Click(object sender, EventArgs e) {
+            Application.OpenForms[0].Hide();
+            FormManager.ShowForm(new RuleForm());
+        }
     }
 }

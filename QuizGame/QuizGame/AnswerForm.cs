@@ -13,5 +13,13 @@ namespace QuizGame {
         public AnswerForm() {
             InitializeComponent();
         }
+
+        private void CorrectButton_Click(object sender, EventArgs e) {
+            FormManager.ShowForm(new ResultForm()); //最終問題の場合
+        }
+
+        private void IncorrectButton_Click(object sender, EventArgs e) {
+            FormManager.ShowForm(new ResultForm()); //最終問題の場合
+        }
     }
 }

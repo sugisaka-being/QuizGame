@@ -52,6 +52,7 @@
     <Compile Include="AnswerForm.Designer.cs">
       <DependentUpon>AnswerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManager.cs" />
     <Compile Include="GamePlayForm.cs">
       <SubType>Form</SubType>
     </Compile>

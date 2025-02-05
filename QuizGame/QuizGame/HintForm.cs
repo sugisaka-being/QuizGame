@@ -13,5 +13,9 @@ namespace QuizGame {
         public HintForm() {
             InitializeComponent();
         }
+
+        private void QuestionBackButton_Click(object sender, EventArgs e) {
+            FormManager.ShowForm(new GamePlayForm());
+        }
     }
 }

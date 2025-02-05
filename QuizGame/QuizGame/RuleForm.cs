@@ -13,5 +13,9 @@ namespace QuizGame {
         public RuleForm() {
             InitializeComponent();
         }
+
+        private void GameStartButton_Click(object sender, EventArgs e) {
+            FormManager.ShowForm(new GamePlayForm());
+        }
     }
 }
