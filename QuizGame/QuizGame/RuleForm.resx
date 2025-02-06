@@ -118,7 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RulesDescriptionLabel.Text" xml:space="preserve">
-    <value>ようこそ、ときタクナルへ！このゲームでは、ヒント君と協力してクイズを解いていきます。
+    <value>
+ようこそ、ときタクナルへ！このゲームでは、ヒント君と協力してクイズを解いていきます。
 
 ゲームの流れ
 　全5問のクイズに挑戦します！各問題ごとに、あなたの答えを入力してください。
