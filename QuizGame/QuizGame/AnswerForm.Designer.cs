@@ -87,13 +87,16 @@
             // 
             // UserAnswerLabel
             // 
+            this.UserAnswerLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.UserAnswerLabel.BackColor = System.Drawing.Color.White;
             this.UserAnswerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserAnswerLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.UserAnswerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.UserAnswerLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserAnswerLabel.Location = new System.Drawing.Point(20, 340);
+            this.UserAnswerLabel.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.UserAnswerLabel.Name = "UserAnswerLabel";
+            this.UserAnswerLabel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.UserAnswerLabel.Size = new System.Drawing.Size(750, 50);
             this.UserAnswerLabel.TabIndex = 9;
             this.UserAnswerLabel.Text = "ユーザーの入力した答えを表示";

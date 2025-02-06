@@ -32,8 +32,9 @@
             this.StartButton.BackColor = System.Drawing.Color.White;
             this.StartButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StartButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.StartButton.FlatAppearance.BorderSize = 2;
             this.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartButton.Font = new System.Drawing.Font("游ゴシック Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.StartButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.StartButton.Location = new System.Drawing.Point(290, 250);
             this.StartButton.Name = "StartButton";
@@ -45,14 +46,14 @@
             // 
             // TitleLabel
             // 
-            this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.TitleLabel.Location = new System.Drawing.Point(185, 135);
+            this.TitleLabel.Location = new System.Drawing.Point(-8, 135);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(411, 64);
+            this.TitleLabel.Size = new System.Drawing.Size(800, 64);
             this.TitleLabel.TabIndex = 1;
             this.TitleLabel.Text = "ときタクナル";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StartForm
             // 
@@ -66,7 +67,6 @@
             this.Name = "StartForm";
             this.Text = "ときタクナル";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

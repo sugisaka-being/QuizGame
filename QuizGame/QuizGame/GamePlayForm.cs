@@ -14,13 +14,15 @@ namespace QuizGame {
         public GamePlayForm() {
             InitializeComponent();
         }
-
         private void HintCharacterButton_Click(object sender, EventArgs e) {
             FormManager.ShowForm(new HintForm());
         }
-
         private void AnswerButton_Click(object sender, EventArgs e) {
-            FormManager.ShowForm(new AnswerForm());
+            if (string.IsNullOrEmpty(AnswerTextBox.Text.Trim())) {
+                AnswerTextBox.Text = "解答が入力されなかったナル！";
+            } else {
+                FormManager.ShowForm(new AnswerForm(AnswerTextBox.Text));
+            }
         }
     }
 }

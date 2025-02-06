@@ -40,7 +40,7 @@
             this.RulesPanel.Controls.Add(this.RulesTitleLabel);
             this.RulesPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.RulesPanel.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RulesPanel.Location = new System.Drawing.Point(39, 27);
+            this.RulesPanel.Location = new System.Drawing.Point(40, 30);
             this.RulesPanel.Name = "RulesPanel";
             this.RulesPanel.Size = new System.Drawing.Size(700, 350);
             this.RulesPanel.TabIndex = 0;
@@ -50,11 +50,12 @@
             this.GameStartButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GameStartButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.GameStartButton.FlatAppearance.BorderSize = 2;
-            this.GameStartButton.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.GameStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GameStartButton.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.GameStartButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
-            this.GameStartButton.Location = new System.Drawing.Point(281, 303);
+            this.GameStartButton.Location = new System.Drawing.Point(280, 305);
             this.GameStartButton.Name = "GameStartButton";
-            this.GameStartButton.Size = new System.Drawing.Size(150, 25);
+            this.GameStartButton.Size = new System.Drawing.Size(150, 30);
             this.GameStartButton.TabIndex = 2;
             this.GameStartButton.Text = "ゲーム開始";
             this.GameStartButton.UseVisualStyleBackColor = true;
@@ -63,24 +64,25 @@
             // RulesDescriptionLabel
             // 
             this.RulesDescriptionLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.RulesDescriptionLabel.Font = new System.Drawing.Font("游ゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RulesDescriptionLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.RulesDescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.RulesDescriptionLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.RulesDescriptionLabel.Location = new System.Drawing.Point(0, 50);
+            this.RulesDescriptionLabel.Location = new System.Drawing.Point(-1, 50);
             this.RulesDescriptionLabel.Name = "RulesDescriptionLabel";
             this.RulesDescriptionLabel.Padding = new System.Windows.Forms.Padding(20, 10, 0, 0);
-            this.RulesDescriptionLabel.Size = new System.Drawing.Size(700, 298);
+            this.RulesDescriptionLabel.Size = new System.Drawing.Size(700, 250);
             this.RulesDescriptionLabel.TabIndex = 1;
             this.RulesDescriptionLabel.Text = resources.GetString("RulesDescriptionLabel.Text");
             // 
             // RulesTitleLabel
             // 
             this.RulesTitleLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.RulesTitleLabel.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RulesTitleLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.RulesTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.RulesTitleLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.RulesTitleLabel.Location = new System.Drawing.Point(0, 0);
+            this.RulesTitleLabel.Location = new System.Drawing.Point(-1, 0);
             this.RulesTitleLabel.Name = "RulesTitleLabel";
+            this.RulesTitleLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.RulesTitleLabel.Size = new System.Drawing.Size(700, 40);
             this.RulesTitleLabel.TabIndex = 0;
             this.RulesTitleLabel.Text = "ルール説明";
