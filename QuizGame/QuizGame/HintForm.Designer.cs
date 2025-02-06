@@ -58,6 +58,7 @@
             this.QuestionBackButton.TabIndex = 20;
             this.QuestionBackButton.Text = "問題に\r\n戻る\r\n";
             this.QuestionBackButton.UseVisualStyleBackColor = false;
+            this.QuestionBackButton.Click += new System.EventHandler(this.QuestionBackButton_Click);
             // 
             // HintReplyBubblePicture
             // 

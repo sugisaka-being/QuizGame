@@ -46,6 +46,7 @@
             this.HomeBackButton.TabIndex = 1;
             this.HomeBackButton.Text = "ホームに戻る";
             this.HomeBackButton.UseVisualStyleBackColor = true;
+            this.HomeBackButton.Click += new System.EventHandler(this.HomeBackButton_Click);
             // 
             // ResultTitleLabel
             // 

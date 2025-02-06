@@ -128,6 +128,7 @@
             this.AnswerButton.TabIndex = 20;
             this.AnswerButton.Text = " 解答！";
             this.AnswerButton.UseVisualStyleBackColor = false;
+            this.AnswerButton.Click += new System.EventHandler(this.AnswerButton_Click);
             // 
             // HintCharacterButton
             // 
@@ -140,6 +141,7 @@
             this.HintCharacterButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HintCharacterButton.TabIndex = 17;
             this.HintCharacterButton.TabStop = false;
+            this.HintCharacterButton.Click += new System.EventHandler(this.HintCharacterButton_Click);
             // 
             // HintBubblePicture
             // 

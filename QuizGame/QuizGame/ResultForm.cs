@@ -13,5 +13,9 @@ namespace QuizGame {
         public ResultForm() {
             InitializeComponent();
         }
+
+        private void HomeBackButton_Click(object sender, EventArgs e) {
+            FormManager.ShowForm(new StartForm());
+        }
     }
 }

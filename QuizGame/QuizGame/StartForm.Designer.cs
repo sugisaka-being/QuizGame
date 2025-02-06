@@ -41,6 +41,7 @@
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "ゲームスタート";
             this.StartButton.UseVisualStyleBackColor = false;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // TitleLabel
             // 
