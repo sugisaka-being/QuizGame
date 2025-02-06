@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.IO;
 
 namespace QuizGame {
+    /// <summary>
+    /// ヒント処理を行うクラス
+    /// </summary>
     class AIQuestionProcessor {
         private readonly string FEndpoint = "https://aoai-ui-being-swc-prd-001.openai.azure.com/";
         private readonly string FApiKey = "b8dcde6dbd7341ae9697e66908d4bc86";
@@ -20,8 +23,12 @@ namespace QuizGame {
             FApiUrl = FEndpoint + "openai/deployments/" + FDeploymentName + "/chat/completions?api-version=2024-02-01";
         }
 
-
-        public string GetAIResponse(string vUserInput) {
+        /// <summary>
+        /// ユーザの入力に対して、AIからの応答を取得するメソッド
+        /// </summary>
+        /// <param name="vUserInputMessage">ユーザーからの入力メッセージ</param>
+        /// <returns>AIによって生成されたメッセージ</returns>
+        public string GetAIResponse(string vUserInputMessage) {
             var wRequestBody = new RequestBody {
                 Messages = new Message[]
                 {
@@ -29,66 +36,59 @@ namespace QuizGame {
                 new Message { Role = "system", Content = "最大50文字以内で簡潔に回答してください" },
                 new Message { Role = "system", Content = "敬語ではなく、フレンドリーな返答をしてください" },
                 new Message { Role = "system", Content = "文章の語尾にはナルをつけてください" },
-                new Message { Role = "user", Content = vUserInput }
+                new Message { Role = "user", Content = vUserInputMessage }
                 },
                 MaxTokens = 100
             };
 
-            string wJsonRequest = SerializeToJson(wRequestBody);
+            string wJsonRequestBody = SerializeToJson(wRequestBody);
 
-            using (var wClient = new HttpClient()) {
-                wClient.DefaultRequestHeaders.Add("api-key", FApiKey);
-                var wContent = new StringContent(wJsonRequest, Encoding.UTF8, "application/json");
+            using (var wApiClient = new HttpClient()) {
+                wApiClient.DefaultRequestHeaders.Add("api-key", FApiKey);
+                var wRequestContent = new StringContent(wJsonRequestBody, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage wResponse = wClient.PostAsync(FApiUrl, wContent).Result;
-                string wJsonResponse = wResponse.Content.ReadAsStringAsync().Result;
+                HttpResponseMessage wApiResponse = wApiClient.PostAsync(FApiUrl, wRequestContent).Result;
+                string wJsonResponse = wApiResponse.Content.ReadAsStringAsync().Result;
 
-
-                // APIのレスポンスを出力して確認するコード
-                
-                Clipboard.SetText(wJsonResponse);
-                MessageBox.Show("API Response: " + wJsonResponse, "API デバッグ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
                 return DeserializeFromJson(wJsonResponse);
             }
         }
 
-
-
+        /// <summary>
+        /// 指定されたRequestBodyオブジェクトをJSON形式の文字列にシリアライズするメソッド
+        /// </summary>
+        /// <param name="vRequestBody">シリアライズするRequestBodyオブジェクト</param>
+        /// <returns>シリアライズされたJSON形式の文字列</returns>
         private string SerializeToJson(RequestBody vRequestBody) {
             using (var wStream = new MemoryStream()) {
-                var wSerializer = new DataContractJsonSerializer(typeof(RequestBody));
-                wSerializer.WriteObject(wStream, vRequestBody);
+                var wJsonSerializer = new DataContractJsonSerializer(typeof(RequestBody));
+                wJsonSerializer.WriteObject(wStream, vRequestBody);
                 return Encoding.UTF8.GetString(wStream.ToArray());
             }
         }
 
-
-
+        /// <summary>
+        /// 指定されたJSON形式のレスポンスをデシリアライズし、AIの応答メッセージを取得するメソッド
+        /// </summary>
+        /// <param name="vJsonResponse">シリアライズするJSON形式の文字列(AIからのレスポンス)</param>
+        /// <returns>AIからの応答メッセージ(エラーが発生したらエラーメッセージ)</returns>
         private string DeserializeFromJson(string vJsonResponse) {
             using (var wStream = new MemoryStream(Encoding.UTF8.GetBytes(vJsonResponse))) {
                 var wSerializer = new DataContractJsonSerializer(typeof(ResponseBody));
-                var wResponse = (ResponseBody)wSerializer.ReadObject(wStream);
+                var wDeserializedResponse = (ResponseBody)wSerializer.ReadObject(wStream);
 
-
-                // nullチェックを追加
-                if (wResponse == null) {
+                if (wDeserializedResponse == null) {
                     return "エラー: APIレスポンスがnullです。";
                 }
-                if (wResponse.Choices == null || wResponse.Choices.Length == 0) {
+                if (wDeserializedResponse.Choices == null || wDeserializedResponse.Choices.Length == 0) {
                     return "エラー: AIの応答が無効です。（Choicesが空またはnull）";
                 }
-                if (wResponse.Choices[0].Message == null || string.IsNullOrEmpty(wResponse.Choices[0].Message.Content)) {
+                if (wDeserializedResponse.Choices[0].Message == null || string.IsNullOrEmpty(wDeserializedResponse.Choices[0].Message.Content)) {
                     return "エラー: AIからの回答が取得できませんでした。";
                 }
-
-
-                return wResponse.Choices[0].Message.Content;
+                return wDeserializedResponse.Choices[0].Message.Content;
             }
         }
-
-
-
     }
 }
 

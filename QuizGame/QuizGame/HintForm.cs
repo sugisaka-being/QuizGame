@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
+    /// <summary>
+    /// ヒント画面
+    /// </summary>
     public partial class HintForm : Form {
         private AIQuestionProcessor FAiProcessor;
 
@@ -18,25 +21,19 @@ namespace QuizGame {
         }
 
         private void QuestionSendButton_Click(object vSender, EventArgs e) {
-            string wUserInput = QuestionTextBox.Text.Trim();
+            string wUserInputMessage = QuestionTextBox.Text.Trim();
 
-            if (string.IsNullOrEmpty(wUserInput)) {
+            if (string.IsNullOrEmpty(wUserInputMessage)) {
                 HintReplyLabel.Text = "質問を入力してね！";
                 return;
-
-                /* メッセージボックスにエラーを表示させる場合
-                MessageBox.Show("質問を入力してね！", "入力エラー", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                */
             }
 
+            //応答中に再度送信ボタンが押せないように無効化
             QuestionSendButton.Enabled = false;
             HintReplyLabel.Text = "考え中だよ…";
 
             try {
-                // AI からのヒントを取得
-                string wAiResponse = FAiProcessor.GetAIResponse(wUserInput);
-
-                // ラベルにヒントを表示
+                string wAiResponse = FAiProcessor.GetAIResponse(wUserInputMessage);
                 HintReplyLabel.Text = wAiResponse;
             } catch (Exception wEx) {
                 MessageBox.Show("エラーが発生しました: " + wEx.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -46,6 +43,5 @@ namespace QuizGame {
                 QuestionSendButton.Enabled = true;
             }
         }
-
     }
 }
