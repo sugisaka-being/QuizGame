@@ -52,6 +52,37 @@ namespace QuizGame {
         /// </summary>
         [DataMember(Name = "choices")]
         public Choice[] Choices { get; set; }
+
+        /// <summary>
+        /// エラー情報（フィルタリングなどのエラーが発生した場合）
+        /// </summary>
+        [DataMember(Name = "error")]
+        public ErrorDetails Error { get; set; }
+    }
+
+
+    /// <summary>
+    /// エラー情報を格納するクラス
+    /// </summary>
+    [DataContract]
+    public class ErrorDetails {
+        /// <summary>
+        /// エラーメッセージ
+        /// </summary>
+        [DataMember(Name = "message")]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// エラーコード
+        /// </summary>
+        [DataMember(Name = "code")]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// エラー発生時のステータス
+        /// </summary>
+        [DataMember(Name = "status")]
+        public int Status { get; set; }
     }
 
     /// <summary>
@@ -65,5 +96,11 @@ namespace QuizGame {
         /// </summary>
         [DataMember(Name = "message")]
         public Message Message { get; set; }
+
+        /// <summary>
+        /// 応答の終了理由（"stop", "content_filter" など）
+        /// </summary>
+        [DataMember(Name = "finish_reason")]
+        public string FinishReason { get; set; }
     }
 }
