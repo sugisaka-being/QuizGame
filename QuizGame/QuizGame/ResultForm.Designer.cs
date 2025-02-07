@@ -87,11 +87,11 @@
             this.FeedbackLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FeedbackLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.FeedbackLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.FeedbackLabel.Location = new System.Drawing.Point(149, 221);
+            this.FeedbackLabel.Location = new System.Drawing.Point(107, 206);
             this.FeedbackLabel.Name = "FeedbackLabel";
-            this.FeedbackLabel.Size = new System.Drawing.Size(352, 72);
+            this.FeedbackLabel.Size = new System.Drawing.Size(430, 99);
             this.FeedbackLabel.TabIndex = 9;
-            this.FeedbackLabel.Text = "点数に応じたコメントを表示";
+            this.FeedbackLabel.Text = "失敗を恐れない君の姿勢に拍手！次回が楽しみナル！";
             this.FeedbackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FeedbackCharacterPicture
