@@ -1,22 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
+    /// <summary>
+    /// 問題解答画面（プレイ画面）
+    /// </summary>
     public partial class GamePlayForm : Form {
         public GamePlayForm() {
             InitializeComponent();
+            LoadQuestion();
         }
+
+        /// <summary>
+        /// 問題文を取得して表示するメソッド
+        /// </summary>
+        private void LoadQuestion() {
+            QuestionLabel.Text = QuestionManager.GetCurrentQuestion().QuestionText;
+        }
+
         private void HintCharacterButton_Click(object sender, EventArgs e) {
             FormManager.ShowForm(new HintForm());
         }
+
         private void AnswerButton_Click(object sender, EventArgs e) {
             if (string.IsNullOrEmpty(AnswerTextBox.Text.Trim())) {
                 AnswerTextBox.Text = "解答が入力されなかったナル！";

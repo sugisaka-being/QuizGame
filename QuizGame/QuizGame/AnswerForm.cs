@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
@@ -19,11 +12,17 @@ namespace QuizGame {
         }
 
         private void CorrectButton_Click(object sender, EventArgs e) {
-            FormManager.ShowForm(new ResultForm()); //最終問題の場合
+            QuestionManager.SetRandomQuestion(); //最終問題じゃない場合
+            FormManager.ShowForm(new GamePlayForm()); //最終問題じゃない場合
+            // FormManager.ShowForm(new ResultForm()); //最終問題の場合
+            // 最終問題の場合は「QuestionManager.SetRandomQuestion();」の記述は丸々消す
         }
 
         private void IncorrectButton_Click(object sender, EventArgs e) {
-            FormManager.ShowForm(new ResultForm()); //最終問題の場合
+            QuestionManager.SetRandomQuestion(); //最終問題じゃない場合
+            FormManager.ShowForm(new GamePlayForm()); //最終問題じゃない場合
+            // FormManager.ShowForm(new ResultForm()); //最終問題の場合
+            // 最終問題の場合は「QuestionManager.SetRandomQuestion();」の記述は丸々消す
         }
     }
 }
