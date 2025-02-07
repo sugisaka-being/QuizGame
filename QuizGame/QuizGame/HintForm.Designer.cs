@@ -44,7 +44,7 @@
             this.HintReplyLabel.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
             this.HintReplyLabel.Size = new System.Drawing.Size(456, 206);
             this.HintReplyLabel.TabIndex = 23;
-            this.HintReplyLabel.Text = "ここに問題文を表示";
+            this.HintReplyLabel.Text = "手助けするよ！\r\n僕に質問してみて！\r\n";
             // 
             // QuestionBackButton
             // 
@@ -80,7 +80,7 @@
             this.QuestionTextBox.Name = "QuestionTextBox";
             this.QuestionTextBox.Size = new System.Drawing.Size(581, 70);
             this.QuestionTextBox.TabIndex = 25;
-            this.QuestionTextBox.Text = "日本の首都は？";
+            this.QuestionTextBox.Text = "ここに質問を入力してね！\r\n(例：世界で一番広い国はどこ？)\r\n";
             // 
             // QuestionSendButton
             // 

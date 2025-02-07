@@ -49,7 +49,6 @@ namespace QuizGame {
 
                 HttpResponseMessage wApiResponse = wApiClient.PostAsync(FApiUrl, wRequestContent).Result;
                 string wJsonResponse = wApiResponse.Content.ReadAsStringAsync().Result;
-
                 return DeserializeFromJson(wJsonResponse);
             }
         }
@@ -77,14 +76,17 @@ namespace QuizGame {
                 var wSerializer = new DataContractJsonSerializer(typeof(ResponseBody));
                 var wDeserializedResponse = (ResponseBody)wSerializer.ReadObject(wStream);
 
-                if (wDeserializedResponse == null) {
-                    return "エラー: APIレスポンスがnullです。";
+                // AOAIのコンテンツフィルタリングに該当する質問だった場合
+                if (wDeserializedResponse.Error != null && wDeserializedResponse.Error.Code == "content_filter") {
+                    return "その質問は良くない質問なんじゃないかな。" + Environment.NewLine + "ボクには答えられないよ。" + Environment.NewLine + "違う質問をしてみて！";
                 }
-                if (wDeserializedResponse.Choices == null || wDeserializedResponse.Choices.Length == 0) {
-                    return "エラー: AIの応答が無効です。（Choicesが空またはnull）";
-                }
-                if (wDeserializedResponse.Choices[0].Message == null || string.IsNullOrEmpty(wDeserializedResponse.Choices[0].Message.Content)) {
-                    return "エラー: AIからの回答が取得できませんでした。";
+
+                if (wDeserializedResponse == null ||
+                    wDeserializedResponse.Choices == null ||
+                    wDeserializedResponse.Choices.Length == 0 ||
+                    wDeserializedResponse.Choices[0].Message == null ||
+                    string.IsNullOrEmpty(wDeserializedResponse.Choices[0].Message.Content)) {
+                    return "ごめんね、うまく考えがまとまらなかったナル..." + Environment.NewLine + "他の質問をしてみて！";
                 }
                 return wDeserializedResponse.Choices[0].Message.Content;
             }
