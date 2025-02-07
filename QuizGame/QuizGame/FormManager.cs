@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace QuizGame {
     /// <summary>
@@ -30,6 +25,11 @@ namespace QuizGame {
             vNewForm.FormClosed += CheckAndExit;
         }
 
+        /// <summary>
+        /// フォームが閉じられた際に。アプリケーションを終了するか確認するメソッド
+        /// </summary>
+        /// <param name="sender">閉じられたフォーム</param>
+        /// <param name="e">フォームのクローズイベント情報</param>
         private static void CheckAndExit(object sender, FormClosedEventArgs e) {
             if (Application.OpenForms.Count == 1) {
                 Application.Exit();

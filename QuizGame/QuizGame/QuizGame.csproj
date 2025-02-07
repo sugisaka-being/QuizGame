@@ -68,6 +68,8 @@
     <Compile Include="HintForm.Designer.cs">
       <DependentUpon>HintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionManager.cs" />
     <Compile Include="ResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
