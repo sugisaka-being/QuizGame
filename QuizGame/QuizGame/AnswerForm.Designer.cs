@@ -34,14 +34,14 @@
             // AnswerExplanationLabel
             // 
             this.AnswerExplanationLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.AnswerExplanationLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.AnswerExplanationLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.AnswerExplanationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.AnswerExplanationLabel.Location = new System.Drawing.Point(0, 0);
             this.AnswerExplanationLabel.Name = "AnswerExplanationLabel";
-            this.AnswerExplanationLabel.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
-            this.AnswerExplanationLabel.Size = new System.Drawing.Size(750, 230);
+            this.AnswerExplanationLabel.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.AnswerExplanationLabel.Size = new System.Drawing.Size(750, 240);
             this.AnswerExplanationLabel.TabIndex = 5;
-            this.AnswerExplanationLabel.Text = "【解答】\r\n\r\n男はスキンヘッドだった\r\n\r\n【解説】\r\n\r\n男はスキンヘッドだったため、髪の毛がなく、\r\n雨に濡れる「髪」時代が存在しなかったということです。";
+            this.AnswerExplanationLabel.Text = "【解答】\r\n\r\n解答を表示\r\n\r\n\r\n【解説】\r\n\r\n解説を表示";
             // 
             // AnswerPanel
             // 
