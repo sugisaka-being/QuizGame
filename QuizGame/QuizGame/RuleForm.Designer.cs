@@ -95,7 +95,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.RulesPanel);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "RuleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";
             this.RulesPanel.ResumeLayout(false);
             this.ResumeLayout(false);

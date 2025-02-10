@@ -45,6 +45,7 @@ namespace QuizGame {
         }
 
         private void QuestionBackButton_Click(object sender, EventArgs e) {
+            CharacterMessageManager.SetRandomHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());
         }
     }

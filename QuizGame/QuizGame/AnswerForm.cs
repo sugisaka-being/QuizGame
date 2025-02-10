@@ -25,14 +25,15 @@ namespace QuizGame {
         }
 
         private void CorrectButton_Click(object sender, EventArgs e) {
-            QuestionManager.SetRandomQuestion(); //最終問題じゃない場合
-            FormManager.ShowForm(new GamePlayForm()); //最終問題じゃない場合
-            // FormManager.ShowForm(new ResultForm()); //最終問題の場合
-            // 最終問題の場合は「QuestionManager.SetRandomQuestion();」の記述は丸々消す
+            // QuestionManager.SetRandomQuestion(); //最終問題じゃない場合
+            // CharacterMessageManager.SetRandomHintkunMessage(); //最終問題じゃない場合
+            // FormManager.ShowForm(new GamePlayForm()); //最終問題じゃない場合
+            FormManager.ShowForm(new ResultForm()); //最終問題の場合、この記述のみ
         }
 
         private void IncorrectButton_Click(object sender, EventArgs e) {
             QuestionManager.SetRandomQuestion(); //最終問題じゃない場合
+            CharacterMessageManager.SetRandomHintkunMessage();
             FormManager.ShowForm(new GamePlayForm()); //最終問題じゃない場合
             // FormManager.ShowForm(new ResultForm()); //最終問題の場合
             // 最終問題の場合は「QuestionManager.SetRandomQuestion();」の記述は丸々消す

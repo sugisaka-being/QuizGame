@@ -117,7 +117,9 @@
             this.Controls.Add(this.FeedbackCharacterPicture);
             this.Controls.Add(this.ResultTitleLabel);
             this.Controls.Add(this.HomeBackButton);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "ResultForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = " ときタクナル";
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackBubblePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackCharacterPicture)).EndInit();
