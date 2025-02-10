@@ -12,6 +12,7 @@ namespace QuizGame {
 
         private void GameStartButton_Click(object sender, EventArgs e) {
             QuestionManager.SetRandomQuestion();
+            CharacterMessageManager.SetInitialHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());
         }
     }

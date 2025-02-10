@@ -6,7 +6,7 @@ namespace QuizGame {
     /// 問題管理クラス
     /// </summary>
     internal static class QuestionManager {
-        private static List<Question> FAllQuestions = new List<Question> {
+        private static readonly List<Question> FAllQuestions = new List<Question> {
             new Question("どんなに使っても減らないものは何でしょう？", "知識", "知識は使えば使うほど増え、減ることはありません。"),
             new Question("目を閉じると見えるけど、目を開けると見えないものは何でしょう？", "夢", "夢は目を閉じていると見ることができるが、目を開けると見えなくなります。"),
             new Question("いつも前に進むけど、決して後ろに戻らないものは何でしょう？", "時計の針、時間", "時計の針は常に進み続け、逆回転することはないからです。"),
@@ -26,21 +26,28 @@ namespace QuizGame {
             new Question("レストランでウェイターが、お客様の注文した料理を運んできました。\r\nしかし、料理は一切手を付けられることなく、そのまま厨房に戻されました。\r\nそれでもお客様は満足していました。\r\nなぜでしょう？ ", "ウェイターが運んできたのは見本用の料理で、実際に出される料理は別に用意される予定だったから", "解答に同じ。"),
             new Question("ある女性に誕生日についてたずねたら、次のように答えました。\r\n「私は、あさって22歳になります。\r\n　でも、去年のお正月は、まだ十代で迎えたんですよ。」\r\n女性の誕生日はいつでしょう？", "1月2日", "この話をしたのは大晦日で21歳。今年の1月2日で21歳、去年の1月2日で20になったので、その一日前の正月（1月1日）ははまだ19歳だったのです。"),
             new Question("ある人物が密かに持っている小さな箱。\r\nその中には決して開けることのできない秘密が詰め込まれています。\r\nしかし、その人物が何かを言うとき、誰もがそれを理解できます。\r\n箱の中身は何でしょう？", "言葉", "言葉は物理的には見えませんが、私たちが発することでその意味を他の人々が理解し、影響を与えます。"),
-             new Question("ある学校には時計があるのに、\r\n生徒たちは時間がわからないと言いました。\r\nなぜでしょう？", "その時計は「温度計」だったから", "壁に掛かっているものが時計だと思い込んでいましたが、実は温度計でした。"),
+            new Question("ある学校には時計があるのに、\r\n生徒たちは時間がわからないと言いました。\r\nなぜでしょう？", "その時計は「温度計」だったから", "壁に掛かっているものが時計だと思い込んでいましたが、実は温度計でした。"),
         };
 
         private static List<Question> FRemainingQuestions = new List<Question>(FAllQuestions);
         private static Question FCurrentQuestion;
+        private static Random FRandom = new Random();
 
         /// <summary>
-        /// ランダムに問題を選択肢し、未出題リストから削除する（すべての問題が出題されると未出題リストはリセットされる）
+        /// 最初の問題をセットするためのコンストラクタ（GetCurrentQuestion()の戻り値がnullになるのを防ぐ）
+        /// </summary>
+        static QuestionManager() {
+            SetRandomQuestion();
+        }
+
+        /// <summary>
+        /// ランダムに問題を選択し、未出題リストから削除する（すべての問題が出題されると未出題リストはリセットされる）
         /// </summary>
         public static void SetRandomQuestion() {
             if (FRemainingQuestions.Count == 0) {
                 FRemainingQuestions = new List<Question>(FAllQuestions);
             }
-            var wRandom = new Random();
-            int wQuestionIndex = wRandom.Next(FRemainingQuestions.Count);
+            int wQuestionIndex = FRandom.Next(FRemainingQuestions.Count);
             FCurrentQuestion = FRemainingQuestions[wQuestionIndex];
             FRemainingQuestions.RemoveAt(wQuestionIndex);
         }

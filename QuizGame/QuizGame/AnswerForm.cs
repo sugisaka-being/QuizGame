@@ -44,6 +44,7 @@ namespace QuizGame {
             } else {
                 GameManager.CurrentQuestion++;
                 QuestionManager.SetRandomQuestion();
+                CharacterMessageManager.SetRandomHintkunMessage();
                 FormManager.ShowForm(new GamePlayForm());
             }
         }

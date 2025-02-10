@@ -10,6 +10,7 @@ namespace QuizGame {
             InitializeComponent();
             LoadQuestion();
             UpdateScore();
+            LoadHintkunMessage();
         }
 
         private void HintCharacterButton_Click(object sender, EventArgs e) {
@@ -22,6 +23,13 @@ namespace QuizGame {
             } else {
                 FormManager.ShowForm(new AnswerForm(AnswerTextBox.Text));
             }
+        }
+
+        /// <summary>
+        /// ヒント君メッセージを取得して表示する
+        /// </summary>
+        private void LoadHintkunMessage() {
+            HintMessageLabel.Text = CharacterMessageManager.GetCurrentHintkunMessage().HintkunMessage;
         }
 
         /// <summary>
