@@ -48,7 +48,7 @@
             this.ScoreValueLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ScoreValueLabel.Size = new System.Drawing.Size(110, 40);
             this.ScoreValueLabel.TabIndex = 12;
-            this.ScoreValueLabel.Text = "10点";
+            this.ScoreValueLabel.Text = "0点";
             this.ScoreValueLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ScoreTitleLabel

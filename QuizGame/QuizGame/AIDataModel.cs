@@ -28,7 +28,7 @@ namespace QuizGame {
     public class Message {
 
         /// <summary>
-        /// メッセージの送信者（"system", "user", ）
+        /// メッセージの送信者（"system", "user"など）
         /// </summary>
         [DataMember(Name = "role")]
         public string Role { get; set; }

@@ -58,6 +58,7 @@
     <Compile Include="CharacterMessage.cs" />
     <Compile Include="CharacterMessageManager.cs" />
     <Compile Include="FormManager.cs" />
+    <Compile Include="GameManager.cs" />
     <Compile Include="GamePlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
