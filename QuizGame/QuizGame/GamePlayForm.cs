@@ -9,13 +9,7 @@ namespace QuizGame {
         public GamePlayForm() {
             InitializeComponent();
             LoadQuestion();
-        }
-
-        /// <summary>
-        /// 問題文を取得して表示するメソッド
-        /// </summary>
-        private void LoadQuestion() {
-            QuestionLabel.Text = QuestionManager.GetCurrentQuestion().QuestionText;
+            UpdateScore();
         }
 
         private void HintCharacterButton_Click(object sender, EventArgs e) {
@@ -28,6 +22,20 @@ namespace QuizGame {
             } else {
                 FormManager.ShowForm(new AnswerForm(AnswerTextBox.Text));
             }
+        }
+
+        /// <summary>
+        /// 最新の得点を表示するメソッド
+        /// </summary>
+        private void UpdateScore() {
+            ScoreValueLabel.Text = GameManager.GetFormattedScore();
+        }
+
+        /// <summary>
+        /// 問題文を取得して表示するメソッド
+        /// </summary>
+        private void LoadQuestion() {
+            QuestionLabel.Text = QuestionManager.GetCurrentQuestion().QuestionText;
         }
     }
 }

@@ -14,22 +14,26 @@ namespace QuizGame {
     /// </summary>
     public partial class ResultForm : Form {
 
-        private int FScore;
-        private Random FRandom = new Random();
+        private int FResultScore = GameManager.Score;
+        private Random FRandomMassage = new Random();
 
-        /// <summary>
-        ///  //本来はResultForm(int vScore)として得点を受け取るのがよいと思う
-        /// </summary>
         public ResultForm() {
             InitializeComponent();
-
-            //FScore = vScore; 　本来はここでスコアをFScoreに代入する
-            FScore = 30;
+            UpdateScore();
             DisplayResultComment();
         }
 
+        //得点と問題数を初期化し、ホームに戻る
         private void HomeBackButton_Click(object sender, EventArgs e) {
+            GameManager.ResetGame();
             FormManager.ShowForm(new StartForm());
+        }
+
+        /// <summary>
+        /// 最新の得点を表示するメソッド
+        /// </summary>
+        private void UpdateScore() {
+            ResultValueLabel.Text = GameManager.GetFormattedScore();
         }
 
         /// <summary>
@@ -47,9 +51,9 @@ namespace QuizGame {
             };
 
             // 渡されたスコアに対応するコメントをランダムで選択
-            if (wCommentPatterns.ContainsKey(FScore)) {
-                string[] wComments = wCommentPatterns[FScore];
-                string wSelectedComment = wComments[FRandom.Next(wComments.Length)];
+            if (wCommentPatterns.ContainsKey(FResultScore)) {
+                string[] wComments = wCommentPatterns[FResultScore];
+                string wSelectedComment = wComments[FRandomMassage.Next(wComments.Length)];
                 FeedbackLabel.Text = wSelectedComment;
             } else {
                 FeedbackLabel.Text = "エラー：スコアがおかしいみたい...";
