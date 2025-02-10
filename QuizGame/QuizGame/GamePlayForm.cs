@@ -9,6 +9,7 @@ namespace QuizGame {
         public GamePlayForm() {
             InitializeComponent();
             LoadQuestion();
+            LoadHintkunMessage();
         }
 
         /// <summary>
@@ -16,6 +17,13 @@ namespace QuizGame {
         /// </summary>
         private void LoadQuestion() {
             QuestionLabel.Text = QuestionManager.GetCurrentQuestion().QuestionText;
+        }
+
+        /// <summary>
+        /// ヒント君メッセージを取得して表示する
+        /// </summary>
+        private void LoadHintkunMessage() {
+            HintMessageLabel.Text = CharacterMessageManager.GetCurrentHintkunMessage().HintkunMessage;
         }
 
         private void HintCharacterButton_Click(object sender, EventArgs e) {

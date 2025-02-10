@@ -83,13 +83,11 @@
             this.HintMessageLabel.BackColor = System.Drawing.Color.White;
             this.HintMessageLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.HintMessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.HintMessageLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HintMessageLabel.Location = new System.Drawing.Point(103, 235);
             this.HintMessageLabel.Name = "HintMessageLabel";
-            this.HintMessageLabel.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.HintMessageLabel.Size = new System.Drawing.Size(455, 70);
             this.HintMessageLabel.TabIndex = 18;
-            this.HintMessageLabel.Text = "困った時は僕をクリックしてみて！！\r\n\r\n";
+            this.HintMessageLabel.Text = "困ったときは僕をクリックしてみて！！";
             this.HintMessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // QuestionLabel
@@ -173,7 +171,9 @@
             this.Controls.Add(this.HintBubblePicture);
             this.Controls.Add(this.QuestionLabel);
             this.Controls.Add(this.ScorePanel);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "GamePlayForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";
             this.ScorePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HintCharacterButton)).EndInit();

@@ -55,6 +55,8 @@
     <Compile Include="AnswerForm.Designer.cs">
       <DependentUpon>AnswerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterMessage.cs" />
+    <Compile Include="CharacterMessageManager.cs" />
     <Compile Include="FormManager.cs" />
     <Compile Include="GamePlayForm.cs">
       <SubType>Form</SubType>
