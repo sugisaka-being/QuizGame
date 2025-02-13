@@ -56,7 +56,7 @@
             this.ScoreTitleLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.ScoreTitleLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ScoreTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
-            this.ScoreTitleLabel.Location = new System.Drawing.Point(-1, -1);
+            this.ScoreTitleLabel.Location = new System.Drawing.Point(-1, 0);
             this.ScoreTitleLabel.Name = "ScoreTitleLabel";
             this.ScoreTitleLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.ScoreTitleLabel.Size = new System.Drawing.Size(110, 40);

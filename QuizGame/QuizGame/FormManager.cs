@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace QuizGame {
     /// <summary>
@@ -19,7 +18,6 @@ namespace QuizGame {
                 vNewForm.FormClosed += CheckAndExit;
                 return;
             }
-            FCurrentForm.Hide();
             vNewForm.Show();
             FCurrentForm.Close();
             FCurrentForm.Dispose();

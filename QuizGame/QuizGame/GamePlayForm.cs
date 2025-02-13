@@ -6,6 +6,9 @@ namespace QuizGame {
     /// 問題解答画面（プレイ画面）
     /// </summary>
     public partial class GamePlayForm : Form {
+        /// <summary>
+        /// 問題解答画面（プレイ画面）クラスのコンストラクタ
+        /// </summary>
         public GamePlayForm() {
             InitializeComponent();
             LoadQuestion();
@@ -26,7 +29,7 @@ namespace QuizGame {
         }
 
         /// <summary>
-        /// ヒント君メッセージを取得して表示する
+        /// ヒント君メッセージを取得して表示するメソッド
         /// </summary>
         private void LoadHintkunMessage() {
             HintMessageLabel.Text = CharacterMessageManager.GetCurrentHintkunMessage().HintkunMessage;

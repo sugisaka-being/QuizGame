@@ -6,6 +6,9 @@ namespace QuizGame {
     /// ルール画面
     /// </summary>
     public partial class RuleForm : Form {
+        /// <summary>
+        /// ルール画面クラスのコンストラクタ
+        /// </summary>
         public RuleForm() {
             InitializeComponent();
         }

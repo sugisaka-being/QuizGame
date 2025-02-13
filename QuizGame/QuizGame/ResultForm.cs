@@ -17,6 +17,9 @@ namespace QuizGame {
         private int FResultScore = GameManager.Score;
         private Random FRandomMassage = new Random();
 
+        /// <summary>
+        /// 最終結果画面クラスのコンストラクタ
+        /// </summary>
         public ResultForm() {
             InitializeComponent();
             UpdateScore();
@@ -40,8 +43,7 @@ namespace QuizGame {
         /// スコアに応じたフィードバックコメントを表示するメソッド
         /// </summary>
         private void DisplayResultComment() {
-            var wCommentPatterns = new Dictionary<int, string[]>()
-            {
+            var wCommentPatterns = new Dictionary<int, string[]>() {
                 { 0,  new string[] { "ナイスチャレンジ！" + Environment.NewLine + "君の挑戦が全ての始まり！", "失敗を恐れない君の姿勢は最高！次回が楽しみナル！" } },
                 { 10, new string[] { "まずは10点！ここから" + Environment.NewLine + "君の成長が始まるよ！", "10点ゲット！小さな成功が未来を照らすよ！" } },
                 { 20, new string[] { "確実に力を伸ばしてるね！半分まであと少しナル！", "その調子！次はさらに" + Environment.NewLine + "チャレンジしてみるナル！" } },

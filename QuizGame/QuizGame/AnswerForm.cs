@@ -8,7 +8,7 @@ namespace QuizGame {
     public partial class AnswerForm : Form {
 
         /// <summary>
-        /// 解答及び正誤判定画面
+        /// 解答及び正誤判定画面クラスのコンストラクタ
         /// </summary>
         /// <param name="vUserAnswerText">GamePlayFormでユーザーが入力した回答</param>
         public AnswerForm(string vUserAnswerText) {
@@ -35,11 +35,10 @@ namespace QuizGame {
         }
 
         /// <summary>
-        /// 次の問題に進む処理を行うメソッド
-        /// 現在の問題数が最大問題数と同じならResultFormに、それ以外なら次の問題を設定してGamePlayFormに遷移する
+        /// 次の画面に遷移するメソッド（現在の問題数が最大問題数と同じならResultFormに、それ以外なら次の問題を設定してGamePlayFormに遷移）
         /// </summary>
         private void ProceedToNext() {
-            if (GameManager.CurrentQuestion == GameManager.MaxQuestions) {
+            if (GameManager.CurrentQuestion == GameManager.C_MaxQuestions) {
                 FormManager.ShowForm(new ResultForm());
             } else {
                 GameManager.CurrentQuestion++;

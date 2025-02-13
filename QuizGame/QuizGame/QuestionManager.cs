@@ -6,6 +6,7 @@ namespace QuizGame {
     /// 問題管理クラス
     /// </summary>
     internal static class QuestionManager {
+
         private static readonly List<Question> FAllQuestions = new List<Question> {
             new Question("どんなに使っても減らないものは何でしょう？", "知識", "知識は使えば使うほど増え、減ることはありません。"),
             new Question("目を閉じると見えるけど、目を開けると見えないものは何でしょう？", "夢", "夢は目を閉じていると見ることができるが、目を開けると見えなくなります。"),
@@ -28,7 +29,6 @@ namespace QuizGame {
             new Question("ある人物が密かに持っている小さな箱。\r\nその中には決して開けることのできない秘密が詰め込まれています。\r\nしかし、その人物が何かを言うとき、誰もがそれを理解できます。\r\n箱の中身は何でしょう？", "言葉", "言葉は物理的には見えませんが、私たちが発することでその意味を他の人々が理解し、影響を与えます。"),
             new Question("ある学校には時計があるのに、\r\n生徒たちは時間がわからないと言いました。\r\nなぜでしょう？", "その時計は「温度計」だったから", "壁に掛かっているものが時計だと思い込んでいましたが、実は温度計でした。"),
         };
-
         private static List<Question> FRemainingQuestions = new List<Question>(FAllQuestions);
         private static Question FCurrentQuestion;
         private static Random FRandom = new Random();

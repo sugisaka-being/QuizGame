@@ -6,6 +6,9 @@ namespace QuizGame {
     /// スタート画面
     /// </summary>
     public partial class StartForm : Form {
+        /// <summary>
+        /// スタート画面クラスのコンストラクタ
+        /// </summary>
         public StartForm() {
             InitializeComponent();
         }
