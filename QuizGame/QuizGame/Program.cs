@@ -11,7 +11,9 @@ namespace QuizGame {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            BGMManager.PlayBGM("バウンドジャングル.mp3");
             Application.Run(new StartForm());
+            BGMManager.StopBGM();
         }
     }
 }
