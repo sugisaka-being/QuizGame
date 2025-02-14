@@ -17,12 +17,16 @@ namespace QuizGame {
             UserAnswerLabel.Text = vUserAnswerText;
         }
 
+        private SoundManager FSoundManager = new SoundManager();
+
         private void CorrectButton_Click(object sender, EventArgs e) {
+            FSoundManager.PlayCorrectSound();
             GameManager.Score += 10;
             ProceedToNext();
         }
 
         private void IncorrectButton_Click(object sender, EventArgs e) {
+            FSoundManager.PlayIncorrectSound();
             ProceedToNext();
         }
 

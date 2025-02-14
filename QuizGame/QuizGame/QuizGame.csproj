@@ -79,6 +79,7 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoundManager.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +140,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kangaetakunaru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Sounds\クリック音.wav" />
+    <Content Include="Resources\Sounds\ゲームスタート.wav" />
+    <Content Include="Resources\Sounds\シンプル結果発表.wav" />
+    <Content Include="Resources\Sounds\ヒント君遷移時.wav" />
+    <Content Include="Resources\Sounds\不正解.wav" />
+    <Content Include="Resources\Sounds\戻る.wav" />
+    <Content Include="Resources\Sounds\正解.wav" />
+    <Content Include="Resources\Sounds\解答.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,6 +16,7 @@ namespace QuizGame {
 
         private int FResultScore = GameManager.Score;
         private Random FRandomMassage = new Random();
+        private SoundManager FSoundManager = new SoundManager();
 
         /// <summary>
         /// 最終結果画面クラスのコンストラクタ
@@ -24,10 +25,12 @@ namespace QuizGame {
             InitializeComponent();
             UpdateScore();
             DisplayResultComment();
+            FSoundManager.PlayResultSound();
         }
 
         //得点と問題数を初期化し、ホームに戻る
         private void HomeBackButton_Click(object sender, EventArgs e) {
+            FSoundManager.PlayClickSound();
             GameManager.ResetGame();
             FormManager.ShowForm(new StartForm());
         }

@@ -13,7 +13,12 @@ namespace QuizGame {
             InitializeComponent();
         }
 
+        private SoundManager FSoundManager = new SoundManager();
+
+
         private void GameStartButton_Click(object sender, EventArgs e) {
+
+            FSoundManager.PlayGameStartSound();
             QuestionManager.SetRandomQuestion();
             CharacterMessageManager.SetInitialHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());

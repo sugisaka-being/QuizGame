@@ -24,10 +24,14 @@ namespace QuizGame {
             FAiProcessor = new AIQuestionProcessor();
         }
 
+        private SoundManager FSoundManager = new SoundManager();
+
         private void QuestionSendButton_Click(object vSender, EventArgs e) {
+            FSoundManager.PlayAnswerSound();
             string wUserInputMessage = QuestionTextBox.Text.Trim();
 
             if (string.IsNullOrEmpty(wUserInputMessage)) {
+                FSoundManager.PlayClickSound();
                 HintReplyLabel.Text = "質問を入力してね！";
                 return;
             }
@@ -49,6 +53,7 @@ namespace QuizGame {
         }
 
         private void QuestionBackButton_Click(object sender, EventArgs e) {
+            FSoundManager.PlayReturnSound();
             CharacterMessageManager.SetRandomHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());
         }
