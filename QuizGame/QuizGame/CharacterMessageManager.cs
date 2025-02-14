@@ -27,7 +27,6 @@ namespace QuizGame {
             new CharacterMessage("難しいほど燃えるよね！"),
             new CharacterMessage("遊んでくれてありがとう！"),
         };
-
         private static List<CharacterMessage> FRemainingHintkunMessages = new List<CharacterMessage>(FAllHintkunMessages);
         private static CharacterMessage FCurrentHintkunMessage;
         private static Random FRandom = new Random();

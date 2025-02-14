@@ -19,6 +19,9 @@ namespace QuizGame {
         private readonly string FDeploymentName = "gpt4-turbo-ui-001";
         private readonly string FApiUrl;
 
+        /// <summary>
+        /// ヒント処理を行うクラスのコンストラクタ
+        /// </summary>
         public AIQuestionProcessor() {
             FApiUrl = FEndpoint + "openai/deployments/" + FDeploymentName + "/chat/completions?api-version=2024-02-01";
         }

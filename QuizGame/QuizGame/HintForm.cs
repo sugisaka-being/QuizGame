@@ -13,8 +13,12 @@ namespace QuizGame {
     /// ヒント画面
     /// </summary>
     public partial class HintForm : Form {
+
         private AIQuestionProcessor FAiProcessor;
 
+        /// <summary>
+        /// ヒント画面クラスのコンストラクタ
+        /// </summary>
         public HintForm() {
             InitializeComponent();
             FAiProcessor = new AIQuestionProcessor();
