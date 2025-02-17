@@ -55,6 +55,7 @@
     <Compile Include="AnswerForm.Designer.cs">
       <DependentUpon>AnswerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BGMManager.cs" />
     <Compile Include="CharacterMessage.cs" />
     <Compile Include="CharacterMessageManager.cs" />
     <Compile Include="FormManager.cs" />
@@ -150,6 +151,21 @@
     <EmbeddedResource Include="Resources\Sounds\戻る.wav" />
     <EmbeddedResource Include="Resources\Sounds\正解.wav" />
     <EmbeddedResource Include="Resources\Sounds\解答.wav" />
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BGM\ジャングルあつい.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BGM\バウンドジャングル.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,9 +21,9 @@ namespace QuizGame {
             SoundManager.Instance.PlayResultSound();
         }
 
-        //得点と問題数を初期化し、ホームに戻る
         private void HomeBackButton_Click(object sender, EventArgs e) {
             SoundManager.Instance.PlayClickSound();
+            BGMManager.PlayBGM("バウンドジャングル.mp3");
             GameManager.ResetGame();
             FormManager.ShowForm(new StartForm());
         }
