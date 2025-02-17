@@ -18,11 +18,13 @@ namespace QuizGame {
         }
 
         private void CorrectButton_Click(object sender, EventArgs e) {
+            SoundManager.Instance.PlayCorrectSound();
             GameManager.Score += 10;
             ProceedToNext();
         }
 
         private void IncorrectButton_Click(object sender, EventArgs e) {
+            SoundManager.Instance.PlayIncorrectSound();
             ProceedToNext();
         }
 
