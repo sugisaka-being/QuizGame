@@ -14,7 +14,7 @@ namespace QuizGame {
         }
 
         private void GameStartButton_Click(object sender, EventArgs e) {
-            BGMManager.PlayBGM("ジャングルあつい.mp3");
+            SoundManager.Instance.PlayGameStartSound();
             QuestionManager.SetRandomQuestion();
             CharacterMessageManager.SetInitialHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());

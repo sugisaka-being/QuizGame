@@ -15,15 +15,18 @@ namespace QuizGame {
             UpdateScore();
             LoadHintkunMessage();
         }
-
+        
         private void HintCharacterButton_Click(object sender, EventArgs e) {
+            SoundManager.Instance.PlayGoHintSound();
             FormManager.ShowForm(new HintForm());
         }
 
         private void AnswerButton_Click(object sender, EventArgs e) {
             if (string.IsNullOrEmpty(AnswerTextBox.Text.Trim())) {
                 AnswerTextBox.Text = "解答が入力されなかったナル！";
+                SoundManager.Instance.PlayClickSound();
             } else {
+                SoundManager.Instance.PlayAnswerSound();
                 FormManager.ShowForm(new AnswerForm(AnswerTextBox.Text));
             }
         }

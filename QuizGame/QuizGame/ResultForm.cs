@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
@@ -24,9 +18,11 @@ namespace QuizGame {
             InitializeComponent();
             UpdateScore();
             DisplayResultComment();
+            SoundManager.Instance.PlayResultSound();
         }
 
         private void HomeBackButton_Click(object sender, EventArgs e) {
+            SoundManager.Instance.PlayClickSound();
             BGMManager.PlayBGM("バウンドジャングル.mp3");
             GameManager.ResetGame();
             FormManager.ShowForm(new StartForm());

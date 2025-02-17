@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
@@ -25,10 +18,13 @@ namespace QuizGame {
         }
 
         private void QuestionSendButton_Click(object vSender, EventArgs e) {
+            SoundManager.Instance.PlayAnswerSound();
             string wUserInputMessage = QuestionTextBox.Text.Trim();
 
             if (string.IsNullOrEmpty(wUserInputMessage)) {
+                SoundManager.Instance.PlayClickSound();
                 HintReplyLabel.Text = "質問を入力してね！";
+                QuestionTextBox.Text = "ここに質問を入力してね！\r\n(例：世界で一番広い国はどこ？)\r\n";
                 return;
             }
 
@@ -49,6 +45,7 @@ namespace QuizGame {
         }
 
         private void QuestionBackButton_Click(object sender, EventArgs e) {
+            SoundManager.Instance.PlayReturnSound();
             CharacterMessageManager.SetRandomHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());
         }
