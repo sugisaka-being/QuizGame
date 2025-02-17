@@ -153,10 +153,18 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\BGM\ジャングルあつい.mp3" />
+    <EmbeddedResource Include="Resources\BGM\GamePlayBGM.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\BGM\バウンドジャングル.mp3" />
+    <EmbeddedResource Include="Resources\BGM\GameStartBGM.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BGM\FiftyPointBGM.mp3" />
+    <EmbeddedResource Include="Resources\BGM\FortyPointBGM.mp3" />
+    <EmbeddedResource Include="Resources\BGM\TenPointBGM.mp3" />
+    <EmbeddedResource Include="Resources\BGM\ThirtyPointBGM.mp3" />
+    <EmbeddedResource Include="Resources\BGM\TwentyPointBGM.mp3" />
+    <EmbeddedResource Include="Resources\BGM\ZeroPointBGM.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
