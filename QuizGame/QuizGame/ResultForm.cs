@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
@@ -16,7 +10,6 @@ namespace QuizGame {
 
         private int FResultScore = GameManager.Score;
         private Random FRandomMassage = new Random();
-        private SoundManager FSoundManager = new SoundManager();
 
         /// <summary>
         /// 最終結果画面クラスのコンストラクタ
@@ -25,12 +18,12 @@ namespace QuizGame {
             InitializeComponent();
             UpdateScore();
             DisplayResultComment();
-            FSoundManager.PlayResultSound();
+            SoundManager.Instance.PlayResultSound();
         }
 
         //得点と問題数を初期化し、ホームに戻る
         private void HomeBackButton_Click(object sender, EventArgs e) {
-            FSoundManager.PlayClickSound();
+            SoundManager.Instance.PlayClickSound();
             GameManager.ResetGame();
             FormManager.ShowForm(new StartForm());
         }

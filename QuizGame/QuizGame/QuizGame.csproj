@@ -142,14 +142,14 @@
     <None Include="Resources\kangaetakunaru.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Sounds\クリック音.wav" />
-    <Content Include="Resources\Sounds\ゲームスタート.wav" />
-    <Content Include="Resources\Sounds\シンプル結果発表.wav" />
-    <Content Include="Resources\Sounds\ヒント君遷移時.wav" />
-    <Content Include="Resources\Sounds\不正解.wav" />
-    <Content Include="Resources\Sounds\戻る.wav" />
-    <Content Include="Resources\Sounds\正解.wav" />
-    <Content Include="Resources\Sounds\解答.wav" />
+    <EmbeddedResource Include="Resources\Sounds\クリック音.wav" />
+    <EmbeddedResource Include="Resources\Sounds\ゲームスタート.wav" />
+    <EmbeddedResource Include="Resources\Sounds\シンプル結果発表.wav" />
+    <EmbeddedResource Include="Resources\Sounds\ヒント君遷移時.wav" />
+    <EmbeddedResource Include="Resources\Sounds\不正解.wav" />
+    <EmbeddedResource Include="Resources\Sounds\戻る.wav" />
+    <EmbeddedResource Include="Resources\Sounds\正解.wav" />
+    <EmbeddedResource Include="Resources\Sounds\解答.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

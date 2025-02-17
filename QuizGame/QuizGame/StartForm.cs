@@ -11,14 +11,11 @@ namespace QuizGame {
         /// スタート画面クラスのコンストラクタ
         /// </summary>
         public StartForm() {
-            FSoundManager.LoadSounds();
             InitializeComponent();
         }
 
-        private SoundManager FSoundManager = new SoundManager();
-
         private void StartButton_Click(object sender, EventArgs e) {
-            FSoundManager.PlayClickSound();
+            SoundManager.Instance.PlayClickSound();
             Application.OpenForms[0].Hide();
             FormManager.ShowForm(new RuleForm());
         }
