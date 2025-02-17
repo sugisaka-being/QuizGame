@@ -8,11 +8,11 @@ namespace QuizGame {
     /// BGM管理クラス
     /// </summary>
     public static class BGMManager {
-        private static WindowsMediaPlayer FBgmPlayer = new WindowsMediaPlayer();
+        private static WindowsMediaPlayer FBGMPlayer = new WindowsMediaPlayer();
         private static string FBGMTempFilePath;
 
         /// <summary>
-        /// BGMを再生する
+        /// 現在のBGMを停止し、指定した新しいBGMを再生する
         /// </summary>
         /// <param name="vBGMFileName">BGMファイルの名前</param>
         public static void PlayBGM(string vBGMFileName) {
@@ -27,11 +27,11 @@ namespace QuizGame {
                     using (var wFileStream = new FileStream(FBGMTempFilePath, FileMode.Create, FileAccess.Write)) {
                         wBGMStream.CopyTo(wFileStream);
                     }
-                    FBgmPlayer.controls.stop();
-                    FBgmPlayer.URL = FBGMTempFilePath;
-                    FBgmPlayer.settings.setMode("loop", true);
-                    FBgmPlayer.settings.volume = 30;
-                    FBgmPlayer.controls.play();
+                    FBGMPlayer.controls.stop();
+                    FBGMPlayer.URL = FBGMTempFilePath;
+                    FBGMPlayer.settings.setMode("loop", true);
+                    FBGMPlayer.settings.volume = 30;
+                    FBGMPlayer.controls.play();
                 }
             } catch (Exception ex) {
                 MessageBox.Show($"BGMの再生に失敗しました：{ex.Message}");
@@ -43,7 +43,7 @@ namespace QuizGame {
         /// </summary>
         public static void StopBGM() {
             try {
-                FBgmPlayer.controls.stop();
+                FBGMPlayer.controls.stop();
                 if (File.Exists(FBGMTempFilePath)) {
                     File.Delete(FBGMTempFilePath);
                 } else {

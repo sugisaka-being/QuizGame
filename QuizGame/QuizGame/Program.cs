@@ -14,7 +14,7 @@ namespace QuizGame {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            BGMManager.PlayBGM("バウンドジャングル.mp3");
+            BGMManager.PlayBGM("GameStartBGM.mp3");
             Application.Run(new StartForm());
             BGMManager.StopBGM();
         }
