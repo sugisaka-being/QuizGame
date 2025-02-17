@@ -22,12 +22,8 @@ namespace QuizGame {
         }
 
         private void HomeBackButton_Click(object sender, EventArgs e) {
-<<<<<<< HEAD
             BGMManager.PlayBGM("GameStartBGM.mp3");
-=======
             SoundManager.Instance.PlayClickSound();
-            BGMManager.PlayBGM("バウンドジャングル.mp3");
->>>>>>> develop
             GameManager.ResetGame();
             FormManager.ShowForm(new StartForm());
         }
