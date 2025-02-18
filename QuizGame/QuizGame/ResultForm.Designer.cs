@@ -91,7 +91,7 @@
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(430, 99);
             this.FeedbackLabel.TabIndex = 9;
-            this.FeedbackLabel.Text = "失敗を恐れない君の姿勢に拍手！次回が楽しみナル！";
+            this.FeedbackLabel.Text = "遊んでくれてありがとう！";
             this.FeedbackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FeedbackCharacterPicture

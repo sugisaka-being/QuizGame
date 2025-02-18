@@ -94,6 +94,19 @@ namespace QuizGame {
         public void PlayCorrectSound() => FCorrectSound.Play();
         public void PlayIncorrectSound() => FIncorrectSound.Play();
         public void PlayReturnSound() => FReturnSound.Play();
+
+        // 結果発表音の再生終了を通知するイベント
+        public event EventHandler ResultSoundPlaybackCompleted;
+
+        /// <summary>
+        /// 効果音を非同期で再生し、再生終了後にイベントを発生させるメソッド
+        /// </summary>
+        public async Task PlayResultSoundWithEvent() {
+            await Task.Run(() => FResultSound.PlaySync());
+
+            // 再生が終了したことを通知
+            ResultSoundPlaybackCompleted?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
 
