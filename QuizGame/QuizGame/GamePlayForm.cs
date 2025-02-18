@@ -32,6 +32,14 @@ namespace QuizGame {
         }
 
         /// <summary>
+        /// 問題番号と問題文を取得して表示するメソッド
+        /// </summary>
+        private void LoadQuestion() {
+            QuestionNumberLabel.Text = $"【第{GameManager.GetCurrentQuestionNumber()}問】";
+            QuestionLabel.Text = QuestionManager.GetCurrentQuestion().QuestionText;
+        }
+
+        /// <summary>
         /// ヒント君メッセージを取得して表示するメソッド
         /// </summary>
         private void LoadHintkunMessage() {
@@ -43,13 +51,6 @@ namespace QuizGame {
         /// </summary>
         private void UpdateScore() {
             ScoreValueLabel.Text = GameManager.GetFormattedScore();
-        }
-
-        /// <summary>
-        /// 問題文を取得して表示するメソッド
-        /// </summary>
-        private void LoadQuestion() {
-            QuestionLabel.Text = QuestionManager.GetCurrentQuestion().QuestionText;
         }
     }
 }
