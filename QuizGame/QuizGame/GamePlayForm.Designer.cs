@@ -33,6 +33,7 @@
             this.AnswerButton = new System.Windows.Forms.Button();
             this.HintCharacterButton = new System.Windows.Forms.PictureBox();
             this.HintBubblePicture = new System.Windows.Forms.PictureBox();
+            this.QuestionNumberLabel = new System.Windows.Forms.Label();
             this.ScorePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HintCharacterButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HintBubblePicture)).BeginInit();
@@ -94,12 +95,12 @@
             // 
             this.QuestionLabel.BackColor = System.Drawing.Color.White;
             this.QuestionLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuestionLabel.Font = new System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.QuestionLabel.Font = new System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.QuestionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.QuestionLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.QuestionLabel.Location = new System.Drawing.Point(25, 20);
             this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.QuestionLabel.Padding = new System.Windows.Forms.Padding(10, 30, 10, 10);
             this.QuestionLabel.Size = new System.Drawing.Size(600, 180);
             this.QuestionLabel.TabIndex = 15;
             this.QuestionLabel.Text = "問題文が表示されているナル";
@@ -158,12 +159,27 @@
             this.HintBubblePicture.TabIndex = 17;
             this.HintBubblePicture.TabStop = false;
             // 
+            // QuestionNumberLabel
+            // 
+            this.QuestionNumberLabel.AutoSize = true;
+            this.QuestionNumberLabel.BackColor = System.Drawing.Color.White;
+            this.QuestionNumberLabel.Font = new System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.QuestionNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.QuestionNumberLabel.Location = new System.Drawing.Point(28, 23);
+            this.QuestionNumberLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.QuestionNumberLabel.Name = "QuestionNumberLabel";
+            this.QuestionNumberLabel.Padding = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            this.QuestionNumberLabel.Size = new System.Drawing.Size(119, 21);
+            this.QuestionNumberLabel.TabIndex = 21;
+            this.QuestionNumberLabel.Text = "【問題番号】";
+            // 
             // GamePlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.QuestionNumberLabel);
             this.Controls.Add(this.AnswerButton);
             this.Controls.Add(this.AnswerTextBox);
             this.Controls.Add(this.HintCharacterButton);
@@ -195,5 +211,6 @@
         private System.Windows.Forms.PictureBox HintCharacterButton;
         private System.Windows.Forms.TextBox AnswerTextBox;
         private System.Windows.Forms.Button AnswerButton;
+        private System.Windows.Forms.Label QuestionNumberLabel;
     }
 }
