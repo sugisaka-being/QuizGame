@@ -171,7 +171,9 @@
             this.Controls.Add(this.HintBubblePicture);
             this.Controls.Add(this.QuestionLabel);
             this.Controls.Add(this.ScorePanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(100, 100);
+            this.MaximizeBox = false;
             this.Name = "GamePlayForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";

@@ -119,7 +119,9 @@
             this.Controls.Add(this.QuestionBackButton);
             this.Controls.Add(this.HintReplyBubblePicture);
             this.Controls.Add(this.HintCharacterPicture);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(100, 100);
+            this.MaximizeBox = false;
             this.Name = "HintForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";
