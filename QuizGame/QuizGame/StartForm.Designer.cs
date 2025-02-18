@@ -64,7 +64,9 @@
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.StartButton);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(100, 100);
+            this.MaximizeBox = false;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";

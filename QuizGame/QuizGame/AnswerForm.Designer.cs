@@ -110,7 +110,9 @@
             this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.UserAnswerLabel);
             this.Controls.Add(this.AnswerPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(100, 100);
+            this.MaximizeBox = false;
             this.Name = "AnswerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";
