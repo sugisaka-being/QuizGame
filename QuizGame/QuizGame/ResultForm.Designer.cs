@@ -38,6 +38,7 @@
             // 
             this.HomeBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.HomeBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HomeBackButton.Enabled = false;
             this.HomeBackButton.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.HomeBackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.HomeBackButton.Location = new System.Drawing.Point(318, 351);

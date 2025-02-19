@@ -22,6 +22,7 @@ namespace QuizGame {
             // 効果音の再生終了後にBGMを再生するイベントを登録
             SoundManager.Instance.ResultSoundPlaybackCompleted += (sender, args) => {
                 PlayResultBGM();
+                HomeBackButton.Enabled = true;
             };
         }
 
