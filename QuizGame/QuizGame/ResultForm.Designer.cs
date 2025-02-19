@@ -38,6 +38,7 @@
             // 
             this.HomeBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.HomeBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HomeBackButton.Enabled = false;
             this.HomeBackButton.Font = new System.Drawing.Font("游ゴシック", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.HomeBackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.HomeBackButton.Location = new System.Drawing.Point(318, 351);
@@ -91,7 +92,7 @@
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(430, 99);
             this.FeedbackLabel.TabIndex = 9;
-            this.FeedbackLabel.Text = "失敗を恐れない君の姿勢に拍手！次回が楽しみナル！";
+            this.FeedbackLabel.Text = "遊んでくれてありがとう！";
             this.FeedbackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FeedbackCharacterPicture

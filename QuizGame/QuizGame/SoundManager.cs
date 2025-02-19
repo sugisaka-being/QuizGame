@@ -59,28 +59,25 @@ namespace QuizGame {
         }
 
         /// <summary>
-        ///ゲームで使用するすべての音を非同期でロードするメソッド
+        ///ゲームで使用するすべての音をロードするメソッド
         /// </summary>
-        public async Task PreloadSoundsAsync() {
-            await Task.WhenAll(
-                PreloadSoundAsync("QuizGame.Resources.Sounds.クリック音.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.ゲームスタート.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.シンプル結果発表.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.ヒント君遷移時.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.解答.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.正解.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.不正解.wav"),
-                PreloadSoundAsync("QuizGame.Resources.Sounds.戻る.wav")
-            );
+        public void PreloadSounds() {
+            PreloadSound("QuizGame.Resources.Sounds.クリック音.wav");
+            PreloadSound("QuizGame.Resources.Sounds.ゲームスタート.wav");
+            PreloadSound("QuizGame.Resources.Sounds.シンプル結果発表.wav");
+            PreloadSound("QuizGame.Resources.Sounds.ヒント君遷移時.wav");
+            PreloadSound("QuizGame.Resources.Sounds.解答.wav");
+            PreloadSound("QuizGame.Resources.Sounds.正解.wav");
+            PreloadSound("QuizGame.Resources.Sounds.不正解.wav");
+            PreloadSound("QuizGame.Resources.Sounds.戻る.wav");
         }
 
         /// <summary>
-        /// 指定されたリソース名の音を非同期にロードするメソッド
+        /// 指定されたリソース名の音をロードするメソッド
         /// </summary>
         /// <param name="vResourceName">ロードする効果音のリソース名</param>
-        /// <returns>非同期の操作を表すタスク</returns>
-        private async Task PreloadSoundAsync(string vResourceName) {
-            await Task.Run(() => CreateSoundPlayer(vResourceName));
+        private void PreloadSound(string vResourceName) {
+            CreateSoundPlayer(vResourceName);
         }
 
         /// <summary>
@@ -94,6 +91,19 @@ namespace QuizGame {
         public void PlayCorrectSound() => FCorrectSound.Play();
         public void PlayIncorrectSound() => FIncorrectSound.Play();
         public void PlayReturnSound() => FReturnSound.Play();
+
+        // 結果発表音の再生終了を通知するイベント
+        public event EventHandler ResultSoundPlaybackCompleted;
+
+        /// <summary>
+        /// 効果音を非同期で再生し、再生終了後にイベントを発生させるメソッド
+        /// </summary>
+        public async Task PlayResultSoundWithEvent() {
+            await Task.Run(() => FResultSound.PlaySync());
+
+            // 再生が終了したことを通知
+            ResultSoundPlaybackCompleted?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
 
