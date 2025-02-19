@@ -28,7 +28,9 @@
             this.CorrectButton = new System.Windows.Forms.Button();
             this.IncorrectButton = new System.Windows.Forms.Button();
             this.UserAnswerLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AnswerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // AnswerExplanationLabel
@@ -47,6 +49,7 @@
             // 
             this.AnswerPanel.BackColor = System.Drawing.Color.White;
             this.AnswerPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AnswerPanel.Controls.Add(this.pictureBox1);
             this.AnswerPanel.Controls.Add(this.CorrectButton);
             this.AnswerPanel.Controls.Add(this.IncorrectButton);
             this.AnswerPanel.Controls.Add(this.AnswerExplanationLabel);
@@ -102,6 +105,16 @@
             this.UserAnswerLabel.Text = "ユーザーの入力した答えを表示";
             this.UserAnswerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuizGame.Properties.Resources.tsunagetakunaru;
+            this.pictureBox1.Location = new System.Drawing.Point(658, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // AnswerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -117,6 +130,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";
             this.AnswerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,5 +141,6 @@
         private System.Windows.Forms.Label UserAnswerLabel;
         private System.Windows.Forms.Button IncorrectButton;
         private System.Windows.Forms.Button CorrectButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -175,5 +175,14 @@
     <EmbeddedResource Include="Resources\BGM\TwentyPointBGM.mp3" />
     <EmbeddedResource Include="Resources\BGM\ZeroPointBGM.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tsunagetakunaru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kawaritakunaru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaizensitakunaru.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

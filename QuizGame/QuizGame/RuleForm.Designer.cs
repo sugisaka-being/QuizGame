@@ -28,13 +28,16 @@
             this.GameStartButton = new System.Windows.Forms.Button();
             this.RulesDescriptionLabel = new System.Windows.Forms.Label();
             this.RulesTitleLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RulesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // RulesPanel
             // 
             this.RulesPanel.BackColor = System.Drawing.Color.White;
             this.RulesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RulesPanel.Controls.Add(this.pictureBox1);
             this.RulesPanel.Controls.Add(this.GameStartButton);
             this.RulesPanel.Controls.Add(this.RulesDescriptionLabel);
             this.RulesPanel.Controls.Add(this.RulesTitleLabel);
@@ -88,6 +91,16 @@
             this.RulesTitleLabel.Text = "ルール説明";
             this.RulesTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuizGame.Properties.Resources.kaizensitakunaru;
+            this.pictureBox1.Location = new System.Drawing.Point(602, 222);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // RuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -102,6 +115,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ときタクナル";
             this.RulesPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,5 +126,6 @@
         private System.Windows.Forms.Label RulesTitleLabel;
         private System.Windows.Forms.Label RulesDescriptionLabel;
         private System.Windows.Forms.Button GameStartButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

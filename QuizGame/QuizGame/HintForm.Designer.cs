@@ -103,7 +103,7 @@
             this.HintCharacterPicture.Location = new System.Drawing.Point(599, 63);
             this.HintCharacterPicture.Name = "HintCharacterPicture";
             this.HintCharacterPicture.Size = new System.Drawing.Size(177, 230);
-            this.HintCharacterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.HintCharacterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HintCharacterPicture.TabIndex = 18;
             this.HintCharacterPicture.TabStop = false;
             // 
