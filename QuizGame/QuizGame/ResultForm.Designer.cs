@@ -30,10 +30,10 @@
             this.ResultValueLabel = new System.Windows.Forms.Label();
             this.FeedbackLabel = new System.Windows.Forms.Label();
             this.FeedbackCharacterPicture = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PeekingCharacter = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackBubblePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackCharacterPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeekingCharacter)).BeginInit();
             this.SuspendLayout();
             // 
             // HomeBackButton
@@ -108,16 +108,16 @@
             this.FeedbackCharacterPicture.TabIndex = 4;
             this.FeedbackCharacterPicture.TabStop = false;
             // 
-            // pictureBox1
+            // PeekingCharacter
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::QuizGame.Properties.Resources.kawaritakunaru;
-            this.pictureBox1.Location = new System.Drawing.Point(118, 100);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.PeekingCharacter.BackColor = System.Drawing.Color.Transparent;
+            this.PeekingCharacter.Image = global::QuizGame.Properties.Resources.kawaritakunaru;
+            this.PeekingCharacter.Location = new System.Drawing.Point(118, 100);
+            this.PeekingCharacter.Name = "PeekingCharacter";
+            this.PeekingCharacter.Size = new System.Drawing.Size(138, 166);
+            this.PeekingCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PeekingCharacter.TabIndex = 10;
+            this.PeekingCharacter.TabStop = false;
             // 
             // ResultForm
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.FeedbackCharacterPicture);
             this.Controls.Add(this.ResultTitleLabel);
             this.Controls.Add(this.HomeBackButton);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PeekingCharacter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(100, 100);
             this.MaximizeBox = false;
@@ -140,7 +140,7 @@
             this.Text = " ときタクナル";
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackBubblePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackCharacterPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeekingCharacter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +148,7 @@
 
         #endregion
         private System.Windows.Forms.Button HomeBackButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PeekingCharacter;
         private System.Windows.Forms.Label ResultTitleLabel;
         private System.Windows.Forms.PictureBox FeedbackBubblePicture;
         private System.Windows.Forms.Label ResultValueLabel;
