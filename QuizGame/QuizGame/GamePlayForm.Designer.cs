@@ -143,7 +143,7 @@
             this.HintCharacterButton.Location = new System.Drawing.Point(626, 149);
             this.HintCharacterButton.Name = "HintCharacterButton";
             this.HintCharacterButton.Size = new System.Drawing.Size(157, 195);
-            this.HintCharacterButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.HintCharacterButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HintCharacterButton.TabIndex = 17;
             this.HintCharacterButton.TabStop = false;
             this.HintCharacterButton.Click += new System.EventHandler(this.HintCharacterButton_Click);

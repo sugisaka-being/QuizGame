@@ -30,8 +30,10 @@
             this.ResultValueLabel = new System.Windows.Forms.Label();
             this.FeedbackLabel = new System.Windows.Forms.Label();
             this.FeedbackCharacterPicture = new System.Windows.Forms.PictureBox();
+            this.PeekingCharacter = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackBubblePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackCharacterPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeekingCharacter)).BeginInit();
             this.SuspendLayout();
             // 
             // HomeBackButton
@@ -54,7 +56,7 @@
             this.ResultTitleLabel.AutoSize = true;
             this.ResultTitleLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ResultTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.ResultTitleLabel.Location = new System.Drawing.Point(300, 50);
+            this.ResultTitleLabel.Location = new System.Drawing.Point(290, 50);
             this.ResultTitleLabel.Name = "ResultTitleLabel";
             this.ResultTitleLabel.Size = new System.Drawing.Size(216, 48);
             this.ResultTitleLabel.TabIndex = 2;
@@ -64,7 +66,7 @@
             // 
             this.FeedbackBubblePicture.BackColor = System.Drawing.Color.Transparent;
             this.FeedbackBubblePicture.Image = ((System.Drawing.Image)(resources.GetObject("FeedbackBubblePicture.Image")));
-            this.FeedbackBubblePicture.Location = new System.Drawing.Point(77, 188);
+            this.FeedbackBubblePicture.Location = new System.Drawing.Point(43, 188);
             this.FeedbackBubblePicture.Name = "FeedbackBubblePicture";
             this.FeedbackBubblePicture.Size = new System.Drawing.Size(522, 134);
             this.FeedbackBubblePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -76,7 +78,7 @@
             this.ResultValueLabel.AutoSize = true;
             this.ResultValueLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ResultValueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.ResultValueLabel.Location = new System.Drawing.Point(330, 110);
+            this.ResultValueLabel.Location = new System.Drawing.Point(320, 110);
             this.ResultValueLabel.Name = "ResultValueLabel";
             this.ResultValueLabel.Size = new System.Drawing.Size(167, 48);
             this.ResultValueLabel.TabIndex = 8;
@@ -88,7 +90,7 @@
             this.FeedbackLabel.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FeedbackLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.FeedbackLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.FeedbackLabel.Location = new System.Drawing.Point(107, 206);
+            this.FeedbackLabel.Location = new System.Drawing.Point(73, 206);
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(430, 99);
             this.FeedbackLabel.TabIndex = 9;
@@ -99,12 +101,23 @@
             // 
             this.FeedbackCharacterPicture.BackColor = System.Drawing.Color.Transparent;
             this.FeedbackCharacterPicture.Image = global::QuizGame.Properties.Resources.Hirakitakunaru;
-            this.FeedbackCharacterPicture.Location = new System.Drawing.Point(605, 167);
+            this.FeedbackCharacterPicture.Location = new System.Drawing.Point(570, 150);
             this.FeedbackCharacterPicture.Name = "FeedbackCharacterPicture";
-            this.FeedbackCharacterPicture.Size = new System.Drawing.Size(177, 175);
-            this.FeedbackCharacterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FeedbackCharacterPicture.Size = new System.Drawing.Size(204, 199);
+            this.FeedbackCharacterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.FeedbackCharacterPicture.TabIndex = 4;
             this.FeedbackCharacterPicture.TabStop = false;
+            // 
+            // PeekingCharacter
+            // 
+            this.PeekingCharacter.BackColor = System.Drawing.Color.Transparent;
+            this.PeekingCharacter.Image = global::QuizGame.Properties.Resources.kawaritakunaru;
+            this.PeekingCharacter.Location = new System.Drawing.Point(118, 100);
+            this.PeekingCharacter.Name = "PeekingCharacter";
+            this.PeekingCharacter.Size = new System.Drawing.Size(138, 166);
+            this.PeekingCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PeekingCharacter.TabIndex = 10;
+            this.PeekingCharacter.TabStop = false;
             // 
             // ResultForm
             // 
@@ -118,6 +131,7 @@
             this.Controls.Add(this.FeedbackCharacterPicture);
             this.Controls.Add(this.ResultTitleLabel);
             this.Controls.Add(this.HomeBackButton);
+            this.Controls.Add(this.PeekingCharacter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(100, 100);
             this.MaximizeBox = false;
@@ -126,6 +140,7 @@
             this.Text = " ときタクナル";
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackBubblePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FeedbackCharacterPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeekingCharacter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +148,7 @@
 
         #endregion
         private System.Windows.Forms.Button HomeBackButton;
+        private System.Windows.Forms.PictureBox PeekingCharacter;
         private System.Windows.Forms.Label ResultTitleLabel;
         private System.Windows.Forms.PictureBox FeedbackBubblePicture;
         private System.Windows.Forms.Label ResultValueLabel;

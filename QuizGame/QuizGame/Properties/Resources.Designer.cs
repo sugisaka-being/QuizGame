@@ -73,9 +73,39 @@ namespace QuizGame.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap kaizensitakunaru {
+            get {
+                object obj = ResourceManager.GetObject("kaizensitakunaru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap kangaetakunaru {
             get {
                 object obj = ResourceManager.GetObject("kangaetakunaru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap kawaritakunaru {
+            get {
+                object obj = ResourceManager.GetObject("kawaritakunaru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap tsunagetakunaru {
+            get {
+                object obj = ResourceManager.GetObject("tsunagetakunaru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
