@@ -14,7 +14,7 @@ namespace QuizGame {
         public AnswerForm(string vUserAnswerText) {
             InitializeComponent();
             LoadAnswer();
-            UserAnswerLabel.Text = vUserAnswerText;
+            UserAnswerLabel.Text = "あなたの答え：" + vUserAnswerText;
         }
 
         private void CorrectButton_Click(object sender, EventArgs e) {

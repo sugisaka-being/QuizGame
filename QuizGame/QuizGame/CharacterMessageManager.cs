@@ -60,7 +60,7 @@ namespace QuizGame {
         /// <summary>
         /// 現在のヒント君メッセージを取得する
         /// </summary>
-        /// <returns>現在選択されている問題</returns>
+        /// <returns>現在選択されているメッセージ</returns>
         public static CharacterMessage GetCurrentHintkunMessage() {
             return FCurrentHintkunMessage;
         }

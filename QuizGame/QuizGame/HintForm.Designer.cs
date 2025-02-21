@@ -74,7 +74,8 @@
             // QuestionTextBox
             // 
             this.QuestionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuestionTextBox.Font = new System.Drawing.Font("游ゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.QuestionTextBox.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.QuestionTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.QuestionTextBox.Location = new System.Drawing.Point(12, 329);
             this.QuestionTextBox.Multiline = true;
             this.QuestionTextBox.Name = "QuestionTextBox";

@@ -112,6 +112,7 @@
             this.AnswerTextBox.BackColor = System.Drawing.Color.White;
             this.AnswerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AnswerTextBox.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.AnswerTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.AnswerTextBox.Location = new System.Drawing.Point(25, 345);
             this.AnswerTextBox.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.AnswerTextBox.Multiline = true;
@@ -119,7 +120,7 @@
             this.AnswerTextBox.Size = new System.Drawing.Size(620, 50);
             this.AnswerTextBox.TabIndex = 19;
             this.AnswerTextBox.TabStop = false;
-            this.AnswerTextBox.Text = "ここに解答を入力してナル！";
+            this.AnswerTextBox.Text = "ここに解答を入力してね！";
             // 
             // AnswerButton
             // 

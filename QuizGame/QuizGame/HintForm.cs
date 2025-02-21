@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Drawing;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuizGame {
     /// <summary>
     /// ヒント画面
     /// </summary>
     public partial class HintForm : Form {
-
+        private readonly string FInitialQuestionMessage = "ここに質問を入力してね！" + Environment.NewLine + "(例：世界で一番広い国はどこ？)";
         private AIQuestionProcessor FAiProcessor;
 
         /// <summary>
@@ -15,16 +18,18 @@ namespace QuizGame {
         public HintForm() {
             InitializeComponent();
             FAiProcessor = new AIQuestionProcessor();
+            GamePlayForm.SetInitialMessage(QuestionTextBox, FInitialQuestionMessage);
+            QuestionTextBox.GotFocus += QuestionTextBox_GotFocus;
         }
 
         private void QuestionSendButton_Click(object vSender, EventArgs e) {
             SoundManager.Instance.PlayAnswerSound();
             string wUserInputMessage = QuestionTextBox.Text.Trim();
 
-            if (string.IsNullOrEmpty(wUserInputMessage)) {
+            if (string.IsNullOrEmpty(wUserInputMessage) || QuestionTextBox.Text == FInitialQuestionMessage) {
                 SoundManager.Instance.PlayClickSound();
                 HintReplyLabel.Text = "質問を入力してね！";
-                QuestionTextBox.Text = "ここに質問を入力してね！\r\n(例：世界で一番広い国はどこ？)\r\n";
+                GamePlayForm.SetInitialMessage(QuestionTextBox, FInitialQuestionMessage);
                 return;
             }
 
@@ -48,6 +53,18 @@ namespace QuizGame {
             SoundManager.Instance.PlayReturnSound();
             CharacterMessageManager.SetRandomHintkunMessage();
             FormManager.ShowForm(new GamePlayForm());
+        }
+
+        /// <summary>
+        /// 初期メッセージが表示されている状態でテキストボックスにフォーカスされた場合、内容をクリアする
+        /// </summary>
+        /// <param name="sender">イベントを発生させたオブジェクト（未使用）</param>
+        /// <param name="e">イベントの引数（未使用）</param>
+        private void QuestionTextBox_GotFocus(object sender, EventArgs e) {
+            if (QuestionTextBox.Text == FInitialQuestionMessage) {
+                QuestionTextBox.Clear();
+                QuestionTextBox.ForeColor = Color.FromArgb(60, 55, 55);
+            }
         }
     }
 }
