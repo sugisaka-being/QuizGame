@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuizGame {
     /// <summary>
