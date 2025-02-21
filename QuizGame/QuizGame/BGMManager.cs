@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using WMPLib;
@@ -9,7 +10,6 @@ namespace QuizGame {
     /// </summary>
     public static class BGMManager {
         private static WindowsMediaPlayer FBGMPlayer = new WindowsMediaPlayer();
-        private static string FBGMTempFilePath;
 
         /// <summary>
         /// 現在のBGMを停止し、指定した新しいBGMを再生する
@@ -18,21 +18,29 @@ namespace QuizGame {
         public static void PlayBGM(string vBGMFileName) {
             try {
                 string wResourceBGM = $"QuizGame.Resources.BGM.{vBGMFileName}";
+                string wTempFilePath = Path.Combine(Path.GetTempPath(), vBGMFileName);
+
+                if (FBGMPlayer.URL == wTempFilePath) {
+                    FBGMPlayer.controls.stop();
+                    FBGMPlayer.URL = "";
+                }
+                if (File.Exists(wTempFilePath)) {
+                    File.Delete(wTempFilePath);
+                }
+
                 using (Stream wBGMStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(wResourceBGM)) {
                     if (wBGMStream == null) {
                         MessageBox.Show("BGMファイルが見つかりませんでした");
                         return;
                     }
-                    FBGMTempFilePath = Path.Combine(Path.GetTempPath(), vBGMFileName);
-                    using (var wFileStream = new FileStream(FBGMTempFilePath, FileMode.Create, FileAccess.Write)) {
+                    using (var wFileStream = new FileStream(wTempFilePath, FileMode.Create, FileAccess.Write)) {
                         wBGMStream.CopyTo(wFileStream);
                     }
-                    FBGMPlayer.controls.stop();
-                    FBGMPlayer.URL = FBGMTempFilePath;
-                    FBGMPlayer.settings.setMode("loop", true);
-                    FBGMPlayer.settings.volume = 30;
-                    FBGMPlayer.controls.play();
                 }
+                FBGMPlayer.URL = wTempFilePath;
+                FBGMPlayer.settings.setMode("loop", true);
+                FBGMPlayer.settings.volume = 30;
+                FBGMPlayer.controls.play();
             } catch (Exception ex) {
                 MessageBox.Show($"BGMの再生に失敗しました：{ex.Message}");
             }
@@ -44,13 +52,30 @@ namespace QuizGame {
         public static void StopBGM() {
             try {
                 FBGMPlayer.controls.stop();
-                if (File.Exists(FBGMTempFilePath)) {
-                    File.Delete(FBGMTempFilePath);
-                } else {
-                    MessageBox.Show("BGMファイルが見つからなかったため削除できませんでした。");
-                }
+                FBGMPlayer.URL = "";
             } catch (Exception ex) {
                 MessageBox.Show($"BGMの停止に失敗しました：{ex.Message}");
+            }
+        }
+
+        private static readonly Dictionary<int, string> FResultBGMDatas = new Dictionary<int, string>() {
+            { 0, "ZeroPointBGM.mp3" },
+            { 10, "TenPointBGM.mp3" },
+            { 20, "TwentyPointBGM.mp3" },
+            { 30, "ThirtyPointBGM.mp3" },
+            { 40, "FortyPointBGM.mp3" },
+            { 50, "FiftyPointBGM.mp3" }
+        };
+
+        /// <summary>
+        /// 点数に応じたBGMを再生する
+        /// </summary>
+        /// <param name="vResultScore">最終得点</param>
+        public static void PlayResultBGM(int vResultScore) {
+            if (FResultBGMDatas.TryGetValue(vResultScore, out var wBGMFileName)) {
+                PlayBGM(wBGMFileName);
+            } else {
+                MessageBox.Show("エラー：スコアに対応するBGMが見つかりません。");
             }
         }
     }

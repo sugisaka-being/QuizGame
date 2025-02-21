@@ -64,5 +64,24 @@ namespace QuizGame {
         public static CharacterMessage GetCurrentHintkunMessage() {
             return FCurrentHintkunMessage;
         }
+
+        private static readonly Dictionary<int, string[]> FResultFeedbackMessages = new Dictionary<int, string[]>() {
+            { 0, new string[] { "ナイスチャレンジ！" + Environment.NewLine + "君の挑戦が全ての始まり！", "失敗を恐れない君の姿勢は最高！次回が楽しみナル！" }},
+            { 10, new string[] { "まずは10点！ここから" + Environment.NewLine + "君の成長が始まるよ！", "10点ゲット！小さな成功が未来を照らすよ！" }},
+            { 20, new string[] { "確実に力を伸ばしてるね！半分まであと少しナル！", "その調子！次はさらに" + Environment.NewLine + "チャレンジしてみるナル！" }},
+            { 30, new string[] { "30点！いい感じ！" + Environment.NewLine + "次はもっと自信を持って！", "全問正解が見えてきたね！君の実力が輝いてるナル！" }},
+            { 40, new string[] { "40点はすごいよ！次回は" + Environment.NewLine + "全問正解を狙うナル！", "惜しかったね！あと少しで" + Environment.NewLine + "パーフェクトだ！" }},
+            { 50, new string[] { "全問正解！君こそ真の" + Environment.NewLine + "クイズマスターナル！", "全制覇おめでとう！最高のパフォーマンスだね！" }}
+        };
+
+        /// <summary>
+        /// スコアに応じたフィードバックコメントを取得するメソッド
+        /// </summary>
+        public static string GetResultComment(int vScore) {
+            if (FResultFeedbackMessages.TryGetValue(vScore, out var wMessages)) {
+                return wMessages[FRandom.Next(wMessages.Length)];
+            }
+            return "エラー：スコアがおかしいみたい...";
+        }
     }
 }
