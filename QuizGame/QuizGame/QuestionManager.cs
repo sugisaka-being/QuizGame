@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace QuizGame {
     /// <summary>
@@ -7,28 +11,7 @@ namespace QuizGame {
     /// </summary>
     internal static class QuestionManager {
 
-        private static readonly List<Question> FAllQuestions = new List<Question> {
-            new Question("どんなに使っても減らないものは何でしょう？", "知識", "知識は使えば使うほど増え、減ることはありません。"),
-            new Question("目を閉じると見えるけど、目を開けると見えないものは何でしょう？", "夢", "夢は目を閉じていると見ることができるが、目を開けると見えなくなります。"),
-            new Question("いつも前に進むけど、決して後ろに戻らないものは何でしょう？", "時計の針、時間", "時計の針は常に進み続け、逆回転することはないからです。"),
-            new Question("私は空から降ってきます。\r\n時には命を育み、時には破壊をもたらします。\r\n姿は透明ですが、私が地面に触れるとそこに色を残します。\r\n私は何でしょう？", "雨", " 雨は透明で、地面を濡らすことで存在を感じられます。自然の循環に欠かせない存在です。"),
-            new Question("丸いけれど、決して転がらないものは何でしょう？", "地球", "地球は丸い形をしていますが、私たちはそれを「転がる」とは感じません。これは地球規模の視点で考えたときのなぞなぞです。"),
-            new Question("ある家族が夕食をとっていたとき、突然停電が起きました。\r\nそれでも家族は慌てることなく、そのまま食事を続けることができました。\r\nどうしてでしょう？", "夕食をとっていたのはキャンプ場で、ランタンを使っていたから。", "解答に同じ。"),
-            new Question("女の子がふたりで一緒にランチをしていました。\r\nふたりはアイスティーを注文しました。\r\n１人は非常に飲むのが早く、もう１人が１杯目を飲み終えるまでに、５杯も飲んでしまいました。\r\nしかし、その飲み物にはすべて毒が入っていました！\r\n１杯しか飲まなかった女の子は死んでしまいましたが、５杯飲んだ女の子は生き残りました。\r\nなぜでしょう？", "氷に毒が入っていたから", "アイスティーを素早く飲み干した女の子の氷はまだ完全に凍っている状態でしたが、ゆっくり飲んだ女の子の方は、徐々に氷の塊が溶けて、飲み物の中に毒が放出されてしまったのです。"),
-            new Question("ある日曜日、2人の母、2人の娘が仲良くショッピングへ出かけ、それぞれ気に入ったバッグを1つずつ購入しました。\r\n家に帰り買い物袋を開けてみると、入っていたバッグは3つでした。\r\nしかし彼女たちに慌てている様子はありません。\r\nどうしてでしょう？", "出かけたのは、おばあちゃん、お母さん、娘の3人だから。", "解答に同じ。"),
-            new Question("私は声もなく、触れることもできないが、誰もが私の存在を感じることができる存在です。\r\n私が来ると、空気が重く感じることもあれば、逆に軽く感じることもあります。\r\n多くの人々にとって、私は予感のようなもので、あなたが気付くころにはすでに過ぎ去っています。\r\n私がいなくなると、周りの空気が再び元の状態に戻ります。\r\n私は何でしょう？", "緊張", "緊張は目に見えないものですが、誰もがその存在を感じることができ、状況によって空気が重く感じたり、逆に解放されたりします。"),
-            new Question("一見無害に見えるが、誰かがそれに触れると、すぐに反応を示します。\r\n反応があったとしても、私は決してその人を傷つけることはありません。\r\n私はほとんどの人が無意識のうちに使い、使い終わった後は一切の痕跡を残さないです。\r\n私は一体何でしょう？", "クリック", "クリックは物理的に触れられることはありませんが、コンピュータやデバイスの操作において反応を引き起こし、痕跡を残さないことが特徴です。"),
-            new Question("ある街に、ある男が住んでいました。\r\n彼はどんなに速く走っても、その足音は一度も聞こえませんでした。\r\n彼が持っているものはすべてが空で、誰も触れたことがないです。\r\nただ一度、彼の後ろにはいつも人影が現れることがあります。\r\nそれは誰で、どこから来るのか、誰も答えられません。\r\nさて、彼は誰でしょう？", "影", "影は静かに存在し、物理的な足音を立てることはありません。影の背後に現れることがあるのは、その影が動くことによって他の影がついてくるからです。"),
-            new Question("私は始めから終わりまで変わることなく存在します。\r\n多くの人が私を恐れ、避けようとしますが、誰も私の中身を完全に理解することはできません。\r\n私は何でしょう？", "死", "死は始めから終わりまで変わることなく存在し、人々が恐れ避けようとしますが、完全に理解することはできません。"),
-            new Question("私にはたくさんの形があるが、どれもひとつとして同じではないです。\r\n誰かが私を手に入れるたびに、私は別の形を持っています。\r\n私がなければ、物事は動かないが、私はどこにも現れないです。\r\n私は一体何でしょう？", "アイデア", "アイデアは形を持たないが、いつも人々の頭の中にあります。思いつくたびに形を変え、物事の進行に重要な役割を果たします。"),
-            new Question("ある男が銀行に行くと、受付に何も言わずに紙を差し出しました。\r\nその後、受付はその紙を見て、彼に多額の現金を渡しました。\r\n一体なぜでしょう？", "小切手を渡したから", "解答に同じ。"),
-            new Question("ある男が雨の中で歩いていたが、彼の髪は一切濡れていませんでした。\r\nどうしてでしょう？", "男はスキンヘッドだった", "解答に同じ。"),
-            new Question("ある建物で火災報知器が作動しました。\r\nしかし、誰も避難しませんでした。\r\nなぜでしょう？", "その建物は消防署だったから", "その建物にいたのは消防士たちなので、非難することなく消火を行いました。"),
-            new Question("レストランでウェイターが、お客様の注文した料理を運んできました。\r\nしかし、料理は一切手を付けられることなく、そのまま厨房に戻されました。\r\nそれでもお客様は満足していました。\r\nなぜでしょう？ ", "ウェイターが運んできたのは見本用の料理で、\r\n実際に出される料理は別に用意される予定だったから", "解答に同じ。"),
-            new Question("ある女性に誕生日についてたずねたら、次のように答えました。\r\n「私は、あさって22歳になります。\r\n　でも、去年のお正月は、まだ十代で迎えたんですよ。」\r\n女性の誕生日はいつでしょう？", "1月2日", "この話をしたのは大晦日で21歳。今年の1月2日で21歳、去年の1月2日で20になったので、その一日前の正月（1月1日）ははまだ19歳だったのです。"),
-            new Question("ある人物が密かに持っている小さな箱。\r\nその中には決して開けることのできない秘密が詰め込まれています。\r\nしかし、その人物が何かを言うとき、誰もがそれを理解できます。\r\n箱の中身は何でしょう？", "言葉", "言葉は物理的には見えませんが、私たちが発することでその意味を他の人々が理解し、影響を与えます。"),
-            new Question("ある学校には時計があるのに、\r\n生徒たちは時間がわからないと言いました。\r\nなぜでしょう？", "その時計は「温度計」だったから", "壁に掛かっているものが時計だと思い込んでいましたが、実は温度計でした。"),
-        };
+        private static readonly List<Question> FAllQuestions = new List<Question>();
         private static List<Question> FRemainingQuestions = new List<Question>(FAllQuestions);
         private static Question FCurrentQuestion;
         private static Random FRandom = new Random();
@@ -37,7 +20,59 @@ namespace QuizGame {
         /// 最初の問題をセットするためのコンストラクタ（GetCurrentQuestion()の戻り値がnullになるのを防ぐ）
         /// </summary>
         static QuestionManager() {
+            LoadQuestionsFromResource();
             SetRandomQuestion();
+        }
+
+        /// <summary>
+        /// リソースファイルからクイズの問題情報を読み込み、問題文、解答、解説を抽出してリストに格納する
+        /// </summary>
+        private static void LoadQuestionsFromResource() {
+            string wQuestionResourceName = "QuizGame.Resources.Questions.QuizQuestions.txt";
+            Stream wQuestionsResourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(wQuestionResourceName);
+            if (wQuestionsResourceStream == null) {
+                MessageBox.Show("指定されたリソースが見つかりませんでした：" + wQuestionResourceName);
+                return;
+            }
+
+            using (var wQuestionsReader = new StreamReader(wQuestionsResourceStream)) {
+                string[] wQuestionBlocks = wQuestionsReader.ReadToEnd().Split(new string[] { "----------" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var wQuestionBlock in wQuestionBlocks) {
+                    var wQuestionDataLines = wQuestionBlock.Trim().Split(new string[] { Environment.NewLine }, StringSplitOptions.None).ToList();
+
+                    string wQuestionText = ExtractSection(ref wQuestionDataLines);
+                    string wAnswer = ExtractSection(ref wQuestionDataLines);
+                    string wExplanation = ExtractSection(ref wQuestionDataLines);
+
+                    FAllQuestions.Add(new Question(wQuestionText, wAnswer, wExplanation));
+                }
+
+                FRemainingQuestions = new List<Question>(FAllQuestions);
+            }
+        }
+
+        /// <summary>
+        /// リストの先頭から空白行をスキップし、空白でない行をセクションとして抽出する
+        /// </summary>
+        /// <param name="vQuestionDataLines">問題情報（問題文・解答・解説）を含む行のリスト</param>
+        /// <returns>抽出されたセクション（問題文、解答、解説など）</returns>
+        private static string ExtractSection(ref List<string> vQuestionDataLines) {
+            SkipEmptyLines(ref vQuestionDataLines);
+
+            var wQuestionSectionLines = vQuestionDataLines.TakeWhile(line => !string.IsNullOrWhiteSpace(line)).ToList();
+            vQuestionDataLines.RemoveRange(0, wQuestionSectionLines.Count);
+
+            return string.Join(Environment.NewLine, wQuestionSectionLines).Trim();
+        }
+
+        /// <summary>
+        /// リストの最初にある空白行をすべて取り除く
+        /// </summary>
+        /// <param name="vQuestionDataLines">問題情報（問題文・解答・解説）を含む行のリスト</param>
+        private static void SkipEmptyLines(ref List<string> vQuestionDataLines) {
+            while (vQuestionDataLines.Count > 0 && string.IsNullOrWhiteSpace(vQuestionDataLines[0])) {
+                vQuestionDataLines.RemoveAt(0);
+            }
         }
 
         /// <summary>
