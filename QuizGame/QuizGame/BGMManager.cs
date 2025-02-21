@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using WMPLib;
@@ -54,6 +55,27 @@ namespace QuizGame {
                 FBGMPlayer.URL = "";
             } catch (Exception ex) {
                 MessageBox.Show($"BGMの停止に失敗しました：{ex.Message}");
+            }
+        }
+
+        private static readonly Dictionary<int, string> FResultBGMDatas = new Dictionary<int, string>() {
+            { 0, "ZeroPointBGM.mp3" },
+            { 10, "TenPointBGM.mp3" },
+            { 20, "TwentyPointBGM.mp3" },
+            { 30, "ThirtyPointBGM.mp3" },
+            { 40, "FortyPointBGM.mp3" },
+            { 50, "FiftyPointBGM.mp3" }
+        };
+
+        /// <summary>
+        /// 点数に応じたBGMを再生する
+        /// </summary>
+        /// <param name="vResultScore">最終得点</param>
+        public static void PlayResultBGM(int vResultScore) {
+            if (FResultBGMDatas.TryGetValue(vResultScore, out var wBGMFileName)) {
+                PlayBGM(wBGMFileName);
+            } else {
+                MessageBox.Show("エラー：スコアに対応するBGMが見つかりません。");
             }
         }
     }

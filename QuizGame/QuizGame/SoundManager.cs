@@ -104,6 +104,14 @@ namespace QuizGame {
             // 再生が終了したことを通知
             ResultSoundPlaybackCompleted?.Invoke(this, EventArgs.Empty);
         }
+
+        /// <summary>
+        /// 最終結果画面の効果音を非同期で再生するメソッド
+        /// </summary>
+        /// <returns></returns>
+        public async Task PlayResultSoundAsync() {
+            await PlayResultSoundWithEvent();
+        }
     }
 }
 
