@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 
 namespace QuizGame {
@@ -24,7 +22,7 @@ namespace QuizGame {
             SetInitialMessage(AnswerTextBox, FInitialAnswerMessage);
             AnswerTextBox.GotFocus += AnswerTextBox_GotFocus;
         }
-        
+
         private void HintCharacterButton_Click(object sender, EventArgs e) {
             SoundManager.Instance.PlayGoHintSound();
             FormManager.ShowForm(new HintForm());

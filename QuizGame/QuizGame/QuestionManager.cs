@@ -15,12 +15,16 @@ namespace QuizGame {
         private static List<Question> FRemainingQuestions = new List<Question>(FAllQuestions);
         private static Question FCurrentQuestion;
         private static Random FRandom = new Random();
+        private static bool FIsQuestionsLoaded = false;
 
         /// <summary>
         /// 最初の問題をセットするためのコンストラクタ（GetCurrentQuestion()の戻り値がnullになるのを防ぐ）
         /// </summary>
         static QuestionManager() {
-            LoadQuestionsFromResource();
+            if (!FIsQuestionsLoaded) {
+                LoadQuestionsFromResource();
+                FIsQuestionsLoaded = true;
+            }
             SetRandomQuestion();
         }
 
