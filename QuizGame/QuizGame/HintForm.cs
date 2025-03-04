@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuizGame {
@@ -20,7 +21,7 @@ namespace QuizGame {
             QuestionTextBox.GotFocus += QuestionTextBox_GotFocus;
         }
 
-        private void QuestionSendButton_Click(object vSender, EventArgs e) {
+        private async void QuestionSendButton_Click(object vSender, EventArgs e) {
             SoundManager.Instance.PlayAnswerSound();
             string wUserInputMessage = QuestionTextBox.Text.Trim();
 
@@ -36,7 +37,7 @@ namespace QuizGame {
             HintReplyLabel.Text = "考え中だよ…";
 
             try {
-                string wAiResponse = FAiProcessor.GetAIResponse(wUserInputMessage);
+                string wAiResponse = await Task.Run(() => FAiProcessor.GetAIResponse(wUserInputMessage));
                 HintReplyLabel.Text = wAiResponse;
             } catch (Exception wEx) {
                 MessageBox.Show("エラーが発生しました: " + wEx.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
