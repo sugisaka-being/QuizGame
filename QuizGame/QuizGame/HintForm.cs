@@ -21,7 +21,7 @@ namespace QuizGame {
             QuestionTextBox.GotFocus += QuestionTextBox_GotFocus;
         }
 
-        private async void QuestionSendButton_Click(object vSender, EventArgs e) {
+        private async void QuestionSendButton_Click(object sender, EventArgs e) {
             SoundManager.Instance.PlayAnswerSound();
             string wUserInputMessage = QuestionTextBox.Text.Trim();
 
